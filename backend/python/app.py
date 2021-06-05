@@ -3,7 +3,7 @@ import json
 from data import area_by_state, record_pred_df
 app = Flask(__name__)
 
-@app.route("/home", methods=["GET", "POST"])
+@app.route("/sumarea", methods=["GET", "POST"])
 def data_json():
     
     return(area_by_state.to_json(orient='records'))

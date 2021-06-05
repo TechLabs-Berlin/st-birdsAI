@@ -12,7 +12,7 @@ area_by_state = pd.DataFrame({'State': state, 'Area_km': areakm})
 #These are the results of the exponential smoothing model on the dataframe that was resampled yearly. It is all 9 states summed together. The prediction ranges from the years 2017-2026)
 #The 2017 - 2019 will be taken out for WD team. Since they will also receive a dataframe of recorded past dates that includes 2008-2019
 #Model is an exponential smoothing model
-predicted_ESM_df=pd.read_csv('../../Data/BrazilESM.csv', header=None)
+predicted_ESM_df=pd.read_csv('../../Data/BrazilESMy.csv', header=None)
 predicted_ESM_df.drop(columns=predicted_ESM_df.columns[0], inplace=True)
 #droping years 2017-2018, reseting index. 
 predicted_ESM_df = predicted_ESM_df.iloc[4:]
