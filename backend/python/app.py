@@ -1,12 +1,14 @@
 from flask import Flask, request, Response, jsonify
 import json
-from data import area_by_state, record_pred_df
+from data import area_by_state, record_pred_df, amz_state
 app = Flask(__name__)
 
 @app.route("/sumarea", methods=["GET", "POST"])
 def data_json():
     
-    return(area_by_state.to_json(orient='records'))
+    #return(area_by_state.to_json(orient='records'))
+    #? returns the json object of the specific states coordinates and their area_km total deforested
+    return(amz_state.to_json())
     
 @app.route("/ESM", methods=["GET", "POST"])
 def ESM_json():
