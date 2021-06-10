@@ -1,0 +1,19 @@
+/**
+ * Basic typography style for copy text
+ */
+
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:300");
+
+body {
+  color: $text-color;
+  font: normal 125% / 1.4 $text-font-stack;
+}
+h1 {
+  font-family: "Arima Madurai", cursive;
+  color: whitesmoke;
+  font-size: 4rem;
+  letter-spacing: -1px;
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
+  position: relative;
+  z-index: 3;
+}
