@@ -8,12 +8,17 @@ body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
 }
-h1 {
+.hero h1 {
   font-family: "Arima Madurai", cursive;
   color: whitesmoke;
   font-size: 4rem;
   letter-spacing: -1px;
+  text-align: center;
   text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.6);
   position: relative;
   z-index: 3;
+}
+.hero h4 {
+  color: rgb(214, 219, 217);
+  font-size: 2rem;
 }
