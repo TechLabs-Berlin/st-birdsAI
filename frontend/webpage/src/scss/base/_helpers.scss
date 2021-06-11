@@ -7,7 +7,7 @@
  */
 .clearfix::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 
@@ -52,4 +52,10 @@
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+// scrolling initialized after button pressed in hero section
+.noscroll {
+  position: fixed;
+  overflow-y: scroll;
 }
