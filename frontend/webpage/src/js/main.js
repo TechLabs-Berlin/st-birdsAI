@@ -19,10 +19,25 @@ function removeNoScroll() {
   function showDiv()
 {
 const div = document.getElementById("scrolly-map");
-if (div.style.display === "none")
+if (div.style.display !== "none")
 {
 div.style.display = "block";
 }else{
     div.style.display = "none";
 }
 }
+// show div after scroll 100px
+$(window).scroll(function() 
+{ 
+  if($(window).scrollTop() > 100) 
+    { 
+      $("#scrolly-map").fadeIn("slow"); 
+    } 
+}); 
+$(window).scroll(function() 
+{ 
+  if($(window).scrollTop() < 100) 
+    { 
+      $("#scrolly-map").fadeOut("fast"); 
+    } 
+}); 

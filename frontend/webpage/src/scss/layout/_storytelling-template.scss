@@ -18,7 +18,8 @@ a:visited {
 #header {
   margin: auto;
   width: 100%;
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 5;
 }
 #header h1,
