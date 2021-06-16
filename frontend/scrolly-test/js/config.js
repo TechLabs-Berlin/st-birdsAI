@@ -1,6 +1,6 @@
 var config = {
     style: 'mapbox://styles/mapbox/satellite-v9',
-    accessToken: 'pk.eyJ1IjoibWJ4c29sdXRpb25zIiwiYSI6ImNrMm01aG9hdTBlZGwzbXQ1ZXVrNHNmejAifQ.QHQA0N6XPWddCXtvoODHZg',
+    accessToken: 'pk.eyJ1IjoiZXZvLWRleCIsImEiOiJja3ByNzJtaXEzMW9hMnBvOGVucHNmMTBjIn0.HTRKElfhwcBU8n_7W6Hiyw',
     showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'light',
