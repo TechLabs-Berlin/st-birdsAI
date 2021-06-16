@@ -181,6 +181,12 @@
           };
         };
 
+        // adds bounds to limit our area of view
+        var bounds = [
+          [-80, -20], // Southwest coordinates
+          [-35, 10], // Northeast coordinates
+        ];
+
         var map = new mapboxgl.Map({
           container: "map",
           style: config.style,
@@ -189,12 +195,26 @@
           bearing: config.chapters[0].location.bearing,
           pitch: config.chapters[0].location.pitch,
           interactive: false,
+          maxBounds: bounds,
           transformRequest: transformRequest,
         });
 
         if (config.showMarkers) {
           var marker = new mapboxgl.Marker({ color: config.markerColor });
-          marker.setLngLat(config.chapters[0].location.center).addTo(map);
+          marker
+            .setLngLat(config.chapters[0].features.marker2.geometry.coordinates)
+            // .setPopup(
+            //   new mapboxgl.Popup({ offset: 25 }) // add popups
+            //     .setHTML(
+            //       "<h3>" +
+            //         config.chapters[0].features.marker2.properties.title +
+            //         "</h3><p>" +
+            //         config.chapters[0].features.marker2.properties.description +
+            //         "</p>" +
+            //         config.chapters[0].features.marker2.properties.media
+            //     )
+            // )
+            .addTo(map);
         }
 
         // instantiate the scrollama
@@ -208,6 +228,18 @@
               tileSize: 512,
               maxzoom: 14,
             });
+            // Add a data source: SAD 2019 Alerts dataset (GeoJSON data).
+            map.addSource("2019 Alerts", {
+              type: "geojson",
+              data: "https://opendata.arcgis.com/datasets/9c4a16f9520447349159fa30abcea08b_2.geojson",
+            });
+            // Add a data source: GLAD Confidence dataset (GeoJSON data).
+            map.addSource("Risk Areas", {
+              type: "geojson",
+              data: "/timelapse/data/GLAD_revert.geojson", // this is an inverted geojson for testing purposes. it highlights the area we're interested in.
+              // original dataset is here:
+              //'https://opendata.arcgis.com/datasets/2f7fbcb1ca6542acb2086b93388d3af4_7.geojson'
+            });
             // add the DEM source as a terrain layer with exaggerated height
             map.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
 
@@ -219,6 +251,29 @@
                 "sky-type": "atmosphere",
                 "sky-atmosphere-sun": [0.0, 0.0],
                 "sky-atmosphere-sun-intensity": 15,
+              },
+            });
+            // Add a new layer to visualize the 2019 polygons.
+            map.addLayer({
+              id: "2019 Alerts",
+              type: "fill",
+              source: "2019 Alerts", // reference the data source
+              layout: {},
+              paint: {
+                "fill-color": "red", // blue color fill
+                "fill-opacity": 0.7,
+              },
+            });
+
+            // Add a new layer to visualize the GLAD Ceonfidence dataset.
+            map.addLayer({
+              id: "Risk Areas",
+              type: "fill",
+              source: "Risk Areas", // reference the data source
+              layout: {},
+              paint: {
+                "fill-color": "white",
+                "fill-opacity": 0.3,
               },
             });
           }
