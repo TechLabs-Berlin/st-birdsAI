@@ -1,14 +1,13 @@
 var config = {
-    style: 'mapbox://styles/scanningpark/ckqgsw3wb0fbq17pfw9hwziwf/draft',
-    accessToken: 'pk.eyJ1Ijoic2Nhbm5pbmdwYXJrIiwiYSI6ImNrcWM1d3g3aTBlZGIycHMxeDFxd2JvcXIifQ.hP49gpxKHlSiLGtE1unhKg',
+    style: 'mapbox://styles/mapbox/satellite-v9',
+    accessToken: 'pk.eyJ1IjoibWJ4c29sdXRpb25zIiwiYSI6ImNrMm01aG9hdTBlZGwzbXQ1ZXVrNHNmejAifQ.QHQA0N6XPWddCXtvoODHZg',
     showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'light',
-    background: true,
     use3dTerrain: false,
-    title: 'BirdsAI',
-    subtitle: 'Monitoring deforestation from a birds eye view',
-    byline: 'By Techlabs Berlin',
+    title: 'Testing if we can add layers on the go',
+    subtitle: 'instead of creating a custom style with mapbox studio',
+    byline: 'By birdsAI',
     footer: 'Source: source citations, etc.',
     chapters: [
         {

@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the counter.
+// -----------------------------------------------------------------------------
+
+.section__counter {
+  padding: 1em;
+}
+#counter-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-height: 70vh;
+  background-color: gray;
+  text-align: center;
+}
+#counter {
+  font-size: 2em;
+  color: rgba(180, 55, 5, 0.952);
+  padding: 1em;
+}
+#disclaimer {
+  font-family: ObjectSans, sans-serif;
+  color: white;
+}
