@@ -1,3 +1,4 @@
+from backend.python.app import drivers_json
 import pandas as pd
 import geopandas as gpd
 #corresponds to data/bargraph.png
@@ -53,3 +54,12 @@ amz = amz[['sigla', 'geometry']]
 #?rename the 'sigla' column to 'State' to make sure merging is successful
 amz.rename(columns={'sigla':'State'},inplace=True)
 amz_state = amz.merge(area_by_state, on='State')
+
+
+#http://www.fao.org/faostat/en/?#data/
+#https://www.worldbank.org/en/home
+
+drivers = pd.read_csv('../../Data/causes_deforest.csv')
+#after applying Lasso regression 3 main comodity/agriculture driven causes of deforestation  were detected (see plots in data)
+main_drivers = drivers[['Year', 'Crop production index', 'Livestock production index', 'Oil palm fruit Area harvested (km2)', 'Forest area (km2)']]
+
