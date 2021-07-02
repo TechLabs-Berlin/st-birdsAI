@@ -1,4 +1,3 @@
-from backend.python.app import drivers_json
 import pandas as pd
 import geopandas as gpd
 #corresponds to data/bargraph.png
@@ -63,3 +62,8 @@ drivers = pd.read_csv('../../Data/causes_deforest.csv')
 #after applying Lasso regression 3 main comodity/agriculture driven causes of deforestation  were detected (see plots in data)
 main_drivers = drivers[['Year', 'Crop production index', 'Livestock production index', 'Oil palm fruit Area harvested (km2)', 'Forest area (km2)']]
 
+To safe the rain forest we have to act now and for that we need to know causes of deforestation. Deforestation in Brazil is 
+mainly comodity driven, with the key drivers being expansion of pasture for beef production, croplands for soy and palm oil. We can see that since 1990 the production of crops and 
+livestock as well as the area of palm oil farms have significantly increased. In contrast, the forest area has decreased. 
+
+*Livestock is commonly defined as domesticated animals raised in an agricultural setting to produce labor and commodities such as meat, eggs, milk, fur, leather, and wool (Wikipedia).  
