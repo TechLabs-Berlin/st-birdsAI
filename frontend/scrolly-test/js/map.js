@@ -392,5 +392,5 @@ var layerTypes = {
   // can be used as callback in on the chapter when we want to switch (in config.js)
   // replace the style url with the desired style (for example 'mapbox://styles/mapbox/satellite-v9')
   function switchStyle() {
-    map.setStyle("mapbox://styles/mapbox/light-v10");
+    map.setStyle("mapbox://styles/mapbox/satellite-v9");
   }
