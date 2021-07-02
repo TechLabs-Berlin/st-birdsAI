@@ -1,6 +1,6 @@
 from flask import Flask, request, Response, jsonify
 import json
-from data import area_by_state, record_pred_df, amz_state
+from data import area_by_state, record_pred_df, amz_state, main_drivers
 app = Flask(__name__)
 
 @app.route("/sumarea", methods=["GET", "POST"])
@@ -14,6 +14,14 @@ def data_json():
 def ESM_json():
   #return(predicted_ESM_df.to_json(orient='records'), recorded_areakm_df.to_json(orient='records'))
   return(record_pred_df.to_json())
+if __name__ == "__main__":
+  app.run(port=5000, debug=True)
+ 
+
+@app.route("/drivers", methods=["GET", "POST"])
+def drivers_json():
+  #returns columns with main drivers, year and area with forest decline. Attention! diffrent scales
+  return(main_drivers.to_json())
 if __name__ == "__main__":
   app.run(port=5000, debug=True)
  
