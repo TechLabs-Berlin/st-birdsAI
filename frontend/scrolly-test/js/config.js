@@ -9,6 +9,8 @@ var config = {
     title: 'BirdsAI',
     subtitle: 'Monitoring deforestation from a birds eye view',
     byline: 'By a Digital Storyteller',
+    headerText: 'This is a short story about the close relationship between the rainforest and our lives, no matter how far away we live from it. Behind many of the products we buy and use every day, the deforestation of the Amazon is hiding. So, what does deforestation look like from a bird\'s eye view?\
+    Let\'s begin our journey.',
     footer: 'Source: source citations, etc.',
     chapters: [
         {

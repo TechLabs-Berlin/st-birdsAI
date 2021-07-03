@@ -37,6 +37,18 @@ a:visited {
   padding: 2vh 2vw;
   text-align: center;
 }
+#header__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 80vh;
+  width: 50vw;
+  margin: 0 auto;
+  color: #fafafa;
+  opacity: 0.9;
+}
 
 #header p,
 #features p {

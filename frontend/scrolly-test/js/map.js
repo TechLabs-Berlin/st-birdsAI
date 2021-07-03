@@ -32,19 +32,21 @@ var layerTypes = {
       map.setPaintProperty(layer.layer, prop, layer.opacity, options);
     });
   }
-
+// HTML creation for the webapp
   var story = document.getElementById("story");
   var features = document.createElement("div");
   features.setAttribute("id", "features");
 
   var header = document.createElement("div");
 
-// try inserting whole html section
+  
+
+// insert flying birds div
   var flyingBirds = document.createElement("div");
   header.appendChild(flyingBirds);
   flyingBirds.setAttribute("id", "birds");
   
-
+// get info from config file onto the webapp
   if (config.title) {
     var titleText = document.createElement("h1");
     titleText.innerText = config.title;
@@ -84,11 +86,42 @@ var layerTypes = {
     </div>'; 
   }
 
+  
+  /* var headerText = document.createElement("div");
+  header.appendChild(headerText);
+  headerText.setAttribute ("id", "header__text"); */
+  
+  if (config.headerText) {
+    var headerText = document.createElement("div");
+    headerText.setAttribute ("id", "header__text");
+    headerText.innerText = config.headerText;
+    header.appendChild(headerText);
+  }
+
+  // div with auto-changing text !!
+  /* var example = ['A', 'B', 'C', 'D'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 3000); // 1 second (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        } */
+
+// creating a navbar placeholder (logo will be added)
   var nav = document.createElement("div");
   story.appendChild(nav);
   nav.setAttribute("class", "nav_placeholder");
 
-
+// configure the chapters
   config.chapters.forEach((record, idx) => {
     var container = document.createElement("div");
     var chapter = document.createElement("div");
@@ -128,6 +161,7 @@ var layerTypes = {
 
   story.appendChild(features);
 
+  // create footer
   var footer = document.createElement("div");
 
   if (config.footer) {
@@ -154,6 +188,7 @@ var layerTypes = {
     };
   };
 
+// create the actual map
   var map = new mapboxgl.Map({
     container: "map",
     style: config.style,
