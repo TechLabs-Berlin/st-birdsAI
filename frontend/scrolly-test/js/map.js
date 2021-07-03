@@ -252,8 +252,8 @@ var layerTypes = {
     // add data source: brazil states geojson
     map.addSource("States", {
       type: "geojson",
-      // data: 'sumarea.geojson'
-      data: "http://localhost:8080/api/v1/amazon/area", // the route on express
+     data: 'src/data/sumarea.geojson'
+       // data: "http://localhost:8080/api/v1/amazon/area", // the route on express
     });
 
     // Add a new layer to visualize states polygons
