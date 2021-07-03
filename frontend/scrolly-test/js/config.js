@@ -1,6 +1,6 @@
 var config = {
-    style: 'mapbox://styles/scanningpark/ckqgsw3wb0fbq17pfw9hwziwf/draft',
-    accessToken: 'pk.eyJ1Ijoic2Nhbm5pbmdwYXJrIiwiYSI6ImNrcWM1d3g3aTBlZGIycHMxeDFxd2JvcXIifQ.hP49gpxKHlSiLGtE1unhKg',
+    style: 'mapbox://styles/neryfu/ckqnf8c360aqf17vvgkfysjh4',
+    accessToken: 'pk.eyJ1IjoibmVyeWZ1IiwiYSI6ImNrb3g0ZGg0NzBjaXIydnBkaDhmNjEydnMifQ.xAcvXosphr3xX8thBLwUXg',
     showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'light',
@@ -8,16 +8,43 @@ var config = {
     use3dTerrain: false,
     title: 'BirdsAI',
     subtitle: 'Monitoring deforestation from a birds eye view',
-    byline: 'By Techlabs Berlin',
+    byline: 'By a Digital Storyteller',
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'first',
+            id: 'intro',
+            alignment: '',
+            hidden: false,
+            title: 'At current rates of deforestation,\
+            27%\ of the Amazon will be without trees by 2030',
+            // image: './path/to/image/source.png',
+            description: 'Five decades ago Brazil incentivized millions of its people to colonize the Amazon. Today their logging yards, cattle enclosures and soy farms sit on the fringes of a vanishing forest. Powered by murky sources of capital and rising demand for beef, a violent and corrupt frontier is now pushing into indigenous land, national parks and one of the most preserved parts of the jungle.\
+            Brazil’s new President, Jair Bolsonaro, an unapologetic cheerleader for the exploitation of the Amazon, has the colonists’ backs; he’s sacked key environmental officials and slashed enforcement. His message: the Amazon is open for business. Since his inauguration in January, the rate of deforestation has soared by as much as 92%, according to satellite imaging.',
+            location: {
+                center: [-58.3, -6.35],
+                zoom: 3,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [
+                { layer: "mapbox-satellite", opacity: 0 },
+                { layer: "Alerts", opacity: 0 },
+                { layer: "States", opacity: 0 }
+            ],
+            onChapterExit: [
+                { layer: "Alerts", opacity: 1 },
+            ]
+        },
+        {
+            id: 'intro2',
             alignment: 'left',
             hidden: false,
-            title: 'First Chapter',
+            title: 'Cattle accounts for 80% of deforested land.',
             // image: './path/to/image/source.png',
-            description: 'This is the first map. We can use it to show our area of interest (Brazil) and add some intro text maybe?.',
+            description: 'In the Amazon around 17% of the forest has been lost in the last 50 years, mostly due to forest conversion for cattle ranching. A slaughterhouse in Jaru, Rondônia, which, after its current expansion is complete, will kill one cow every eight seconds.',
             location: {
                 center: [-58.3, -6.35],
                 zoom: 3,
@@ -79,7 +106,7 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: '',
-            onChapterEnter: [
+            onChapterEnter: [{ layer: "mapbox-satellite", opacity: 1 },
                 { layer: "Alerts", opacity: 0 },
                 { layer: "States", opacity: 0 }
             ],
@@ -105,7 +132,9 @@ var config = {
                 { layer: "Alerts", opacity: 0 },
                 { layer: "States", opacity: 0 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                { layer: "mapbox-satellite", opacity: 0 }
+            ]
         },
         {
             id: 'choropleth',
@@ -144,7 +173,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'testCallback',
+            callback: '',
             onChapterEnter: [
                 { layer: "Alerts", opacity: 0 },
                 { layer: "States", opacity: 0.7 }
@@ -166,7 +195,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'testCallback',
+            callback: '',
             onChapterEnter: [
                 { layer: "Alerts", opacity: 0 },
                 { layer: "States", opacity: 0.3 }

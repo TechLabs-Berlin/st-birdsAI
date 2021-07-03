@@ -394,3 +394,7 @@ var layerTypes = {
   function switchStyle() {
     map.setStyle("mapbox://styles/mapbox/satellite-v9");
   }
+  // default syle
+  function switchToCustomStyle() {
+    map.setStyle("mapbox://styles/scanningpark/ckqgsw3wb0fbq17pfw9hwziwf/draft");
+  }
