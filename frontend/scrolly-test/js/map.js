@@ -85,11 +85,6 @@ var layerTypes = {
       <div class="bird bird--four"></div>\
     </div>'; 
   }
-
-  
-  /* var headerText = document.createElement("div");
-  header.appendChild(headerText);
-  headerText.setAttribute ("id", "header__text"); */
   
   if (config.headerText) {
     var headerText = document.createElement("div");
@@ -98,8 +93,18 @@ var layerTypes = {
     header.appendChild(headerText);
   }
 
-  // div with auto-changing text !!
-  /* var example = ['A', 'B', 'C', 'D'];
+// creating a navbar placeholder (logo will be added)
+  var nav = document.createElement("div");
+  story.appendChild(nav);
+  nav.setAttribute("class", "nav_placeholder");
+
+ // div for  auto-changing text
+  var sequenceText = document.createElement("div");
+  nav.appendChild(sequenceText);
+  sequenceText.setAttribute("id", "sequence");
+
+  // populate nav with auto-changing text !!
+  var example = ['Can you try to eat less meat?', 'Can you try to drink less coffee?', 'Would you care for your mobile phone and use it for longer than 4 years?', 'Can you try to eat less avocado?', 'Or dare I say...eat less chocolate?'];
 
         textSequence(0);
         function textSequence(i) {
@@ -114,12 +119,8 @@ var layerTypes = {
                 textSequence(0);
             }
 
-        } */
+        } 
 
-// creating a navbar placeholder (logo will be added)
-  var nav = document.createElement("div");
-  story.appendChild(nav);
-  nav.setAttribute("class", "nav_placeholder");
 
 // configure the chapters
   config.chapters.forEach((record, idx) => {
@@ -161,10 +162,10 @@ var layerTypes = {
 
   story.appendChild(features);
 
-  // create footer
-  var footer = document.createElement("div");
+  // FOOTER
+  //var footer = document.createElement("div");
 
-  if (config.footer) {
+  /* if (config.footer) {
     var footerText = document.createElement("p");
     footerText.innerHTML = config.footer;
     footer.appendChild(footerText);
@@ -174,7 +175,7 @@ var layerTypes = {
     footer.classList.add(config.theme);
     footer.setAttribute("id", "footer");
     story.appendChild(footer);
-  }
+  } */
 
   mapboxgl.accessToken = config.accessToken;
 
@@ -356,7 +357,7 @@ var layerTypes = {
           });
         }
         // when entering the timelapse chapters, make the markers visible
-        if (chapter.id == "timelapse" || chapter.id == "timelapse-big") {
+        if (chapter.id == "timelapse-big") {
           var markers = document.getElementsByClassName("marker");
           for (let i = 0; i < markers.length; i++) {
             markers[i].style.visibility = "visible";
