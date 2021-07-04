@@ -113,7 +113,7 @@ var layerTypes = {
                 setTimeout(function() {
                     document.getElementById("sequence").innerHTML = example[i];
                     textSequence(++i);
-                }, 3000); // 1 second (in milliseconds)
+                }, 4000); // 4 seconds (in milliseconds)
 
             } else if (example.length == i) { // Loop
                 textSequence(0);
@@ -272,7 +272,7 @@ var layerTypes = {
     });
 
     // Add a new layer to visualize the 2019 polygons.
-    map.addLayer({
+    /* map.addLayer({
       id: "Alerts",
       type: "fill",
       source: "Alerts", // reference the data source
@@ -283,7 +283,7 @@ var layerTypes = {
         "fill-color": "red", // red color fill
         "fill-opacity": 0.7,
       },
-    });
+    }); */
 
     // add data source: brazil states geojson
     map.addSource("States", {

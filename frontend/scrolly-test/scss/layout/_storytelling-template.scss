@@ -48,6 +48,7 @@ a:visited {
   margin: 0 auto;
   color: #fafafa;
   opacity: 0.9;
+  animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
 }
 
 #header p,

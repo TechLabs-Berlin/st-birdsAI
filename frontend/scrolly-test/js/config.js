@@ -84,7 +84,9 @@ var config = {
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0.7 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                { layer: "sad-alerts", opacity: 0 }
+            ]
         },
         {
             id: 'choropleth2',
@@ -128,7 +130,10 @@ var config = {
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0.3 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                { layer: "sad-alerts", opacity: 0 },
+                { layer: "States", opacity: 0 }
+            ]
         },
         {
             id: 'second',
@@ -148,9 +153,12 @@ var config = {
             callback: '',
             onChapterEnter: [
                  { layer: "sad-alerts", opacity: 0 },
-                 { layer: "States", opacity: 0 }
+                 { layer: "States", opacity: 0 },
+                 { layer: "mapbox-satellite", opacity: 0 }
             ],
             onChapterExit: [
+                { layer: "mapbox-satellite", opacity: 0 },
+                { layer: "sad-alerts", opacity: 0 }
             ]
         },
         {
