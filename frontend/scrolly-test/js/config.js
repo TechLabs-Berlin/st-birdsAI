@@ -30,12 +30,16 @@ var config = {
             rotateAnimation: false,
             callback: '',
             onChapterEnter: [
+                { layer: "state-label", opacity: 1 },
+                { layer: "country-label", opacity: 1 },
                 { layer: "mapbox-satellite", opacity: 0 },
                 { layer: "States", opacity: 0 },
                 { layer: "sad-alerts", opacity: 1 },
                 
             ],
             onChapterExit: [
+                { layer: "state-label", opacity: 0 },
+                { layer: "country-label", opacity: 0 },
                 { layer: "sad-alerts", opacity: 1 },
             ]
         },
@@ -81,6 +85,7 @@ var config = {
             rotateAnimation: false,
             callback: 'addStatePopups',
             onChapterEnter: [
+                { layer: "state-label", opacity: 1 },
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0.8 }
             ],
@@ -108,7 +113,9 @@ var config = {
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0.8 }
             ],
-            onChapterExit: []
+            onChapterExit: [
+                
+            ]
         },
         {
             id: 'choropleth3',
@@ -131,6 +138,7 @@ var config = {
                 { layer: "States", opacity: 0.3 }
             ],
             onChapterExit: [
+                { layer: "state-label", opacity: 0 },
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0 }
             ]
