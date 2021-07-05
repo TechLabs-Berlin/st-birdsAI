@@ -69,6 +69,76 @@ var config = {
             ]
         },
         {
+            id: 'timelapse',
+            alignment: 'left',
+            hidden: false,
+            title: 'Timelapse points',
+            // image: './path/to/image/source.png',
+            description: "President Bolsonaro\'s message to the world is: the Amazon is open for business! Since his inauguration in January, the rate of deforestation has soared by as much as 92%, according to satellite imaging. Click on the markers to see the timelapse videos",
+            location: {
+                center: [-56.3, -5.35],
+                zoom: 5.5,
+                pitch: 45,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [{ layer: "mapbox-satellite", opacity: 1 },
+                { layer: "sad-alerts", opacity: 0 },
+                { layer: "States", opacity: 0 }
+            ],
+            onChapterExit: []
+        },
+        {
+            id: 'timelapse-big',
+            alignment: 'center',
+            hidden: true,
+            title: 'Timelapse - bigger picture',
+            // image: './path/to/image/source.png',
+            description: "a chapter without a text box: zoom out to see all the timelapse markers",
+            location: {
+                center: [-56.3, -5.35],
+                zoom: 4.5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ { layer: "mapbox-satellite", opacity: 1 },
+                { layer: "sad-alerts", opacity: 0 },
+                { layer: "States", opacity: 0 }
+            ],
+            onChapterExit: [
+                { layer: "mapbox-satellite", opacity: 0 }
+            ]
+        },
+        {
+            id: 'timelapse-big2',
+            alignment: 'center',
+            hidden: true,
+            title: 'Timelapse - emtpy chapter',
+            // image: './path/to/image/source.png',
+            description: "an emtpy chapter to create more space for the user to scroll.",
+            location: {
+                center: [-56.3, -5.35],
+                zoom: 4.5,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [ { layer: "mapbox-satellite", opacity: 1 },
+                { layer: "sad-alerts", opacity: 0 },
+                { layer: "States", opacity: 0 }
+            ],
+            onChapterExit: [
+                { layer: "mapbox-satellite", opacity: 0 }
+            ]
+        },
+        {
             id: 'choropleth',
             alignment: 'right',
             hidden: false,
@@ -167,76 +237,6 @@ var config = {
             onChapterExit: [
                 { layer: "mapbox-satellite", opacity: 0 },
                 { layer: "sad-alerts", opacity: 0 }
-            ]
-        },
-        {
-            id: 'timelapse',
-            alignment: 'left',
-            hidden: false,
-            title: 'Timelapse points',
-            // image: './path/to/image/source.png',
-            description: "President Bolsonaro\'s message to the world is: the Amazon is open for business! Since his inauguration in January, the rate of deforestation has soared by as much as 92%, according to satellite imaging. Click on the markers to see the timelapse videos",
-            location: {
-                center: [-56.3, -5.35],
-                zoom: 5.5,
-                pitch: 45,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [{ layer: "mapbox-satellite", opacity: 1 },
-                { layer: "sad-alerts", opacity: 0 },
-                { layer: "States", opacity: 0 }
-            ],
-            onChapterExit: []
-        },
-        {
-            id: 'timelapse-big',
-            alignment: 'center',
-            hidden: true,
-            title: 'Timelapse - bigger picture',
-            // image: './path/to/image/source.png',
-            description: "a chapter without a text box: zoom out to see all the timelapse markers",
-            location: {
-                center: [-56.3, -5.35],
-                zoom: 4.5,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [ { layer: "mapbox-satellite", opacity: 1 },
-                { layer: "sad-alerts", opacity: 0 },
-                { layer: "States", opacity: 0 }
-            ],
-            onChapterExit: [
-                { layer: "mapbox-satellite", opacity: 0 }
-            ]
-        },
-        {
-            id: 'timelapse-big2',
-            alignment: 'center',
-            hidden: true,
-            title: 'Timelapse - emtpy chapter',
-            // image: './path/to/image/source.png',
-            description: "an emtpy chapter to create more space for the user to scroll.",
-            location: {
-                center: [-56.3, -5.35],
-                zoom: 4.5,
-                pitch: 0,
-                bearing: 0
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [ { layer: "mapbox-satellite", opacity: 1 },
-                { layer: "sad-alerts", opacity: 0 },
-                { layer: "States", opacity: 0 }
-            ],
-            onChapterExit: [
-                { layer: "mapbox-satellite", opacity: 0 }
             ]
         },
         
