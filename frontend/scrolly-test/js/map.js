@@ -53,7 +53,7 @@ var layerTypes = {
   flyingBirds.setAttribute("id", "birds");
 
 // create slider Div and hide at first
-    var sliderDiv = document.createElement("div");
+    /* var sliderDiv = document.createElement("div");
     sliderDiv.setAttribute ("id", "console");
     header.appendChild(sliderDiv);
     sliderDiv.innerHTML = 
@@ -69,7 +69,7 @@ var layerTypes = {
         <div class='label'>137k</div>\
         <div class='label' id='last'>195k</div>\
         </div>\
-      </div>";
+      </div>"; */
   
   
 // get info from config file onto the webapp
@@ -111,6 +111,7 @@ var layerTypes = {
       <div class="bird bird--four"></div>\
     </div>'; 
   }
+
   
   if (config.headerText) {
     var headerText = document.createElement("div");
@@ -169,6 +170,26 @@ var layerTypes = {
       var story = document.createElement("p");
       story.innerHTML = record.description;
       chapter.appendChild(story);
+    }
+
+    if (record.slider){
+    var sliderDiv = document.createElement("div");
+    sliderDiv.setAttribute ("id", "console");
+    header.appendChild(sliderDiv);
+    sliderDiv.innerHTML = 
+    "<h1>Timeseries predicitons</h1>\
+      <div class='session'>\
+        <h2>Area deforested (sq km)</h2>\
+        <div class='session' id='sliderbar'>\
+          <h2>Year: <label id='active-year'>2020</label></h2>\
+          <input id='slider' class='row' type='range' min='2020' max='2026' step='1' value='2020' />\
+      </div>\
+      <div class='row'>\
+        <div class='label' id='first'>100k</div>\
+        <div class='label'>137k</div>\
+        <div class='label' id='last'>195k</div>\
+        </div>\
+      </div>";
     }
 
     container.setAttribute("id", record.id);
@@ -439,10 +460,25 @@ var layerTypes = {
         }
   });
 
+  //hide slider element when user scrolls back to top!
+  function hideSLiderElement (){
+    const div = document.getElementById("console");
+    div.style.opacity = "0";
+  }
+// make slider visible on chapter
   function createSliderElement (){
     const div = document.getElementById("console");
     div.style.opacity = "1";
+    div.style.position = "fixed";
+    div.style.top = "0";
   }
+// make slider disappear from chapter
+function removeSliderElement (){
+  const div = document.getElementById("console");
+  div.style.opacity = "0";
+  div.style.position = "absolute";
+    div.style.top = "";
+}
 
   // callback function to be used in the choropleth chapters:
   // When a click event occurs on a feature in the states layer, open a popup at the
