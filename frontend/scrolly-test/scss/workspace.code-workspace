@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../scrolly-newest"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "scrolly-test"
+  }
+}

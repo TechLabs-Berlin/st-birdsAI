@@ -1,0 +1,54 @@
+/*******css rules for the slider ************/
+
+/* the slider console */
+#console {
+  position: absolute;
+  width: 240px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  opacity: 0;
+}
+#console h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+#console h2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+#console a {
+  text-decoration: none;
+  color: #2dc4b2;
+}
+
+.session {
+  margin-bottom: 20px;
+}
+
+/* the row of labels that go under the slider */
+.row {
+  height: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+/* the numbers shown under the slider */
+.label {
+  width: 15%;
+  display: inline-block;
+  text-align: center;
+}
+
+/* just to make them spread across the slider evenly.
+        there is probably a better solution for it */
+#first {
+  padding-right: 3.5em;
+}
+
+#last {
+  padding-left: 3.5em;
+}

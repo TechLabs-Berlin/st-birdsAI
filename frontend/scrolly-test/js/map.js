@@ -1,3 +1,7 @@
+
+// Layer setup //
+
+// Layer types
 var layerTypes = {
     fill: ["fill-opacity"],
     line: ["line-opacity"],
@@ -8,6 +12,7 @@ var layerTypes = {
     heatmap: ["heatmap-opacity"],
   };
 
+  // Textbos alignments
   var alignments = {
     left: "lefty",
     center: "centered",
@@ -32,6 +37,9 @@ var layerTypes = {
       map.setPaintProperty(layer.layer, prop, layer.opacity, options);
     });
   }
+
+// HTML Setup //
+
 // HTML creation for the webapp
   var story = document.getElementById("story");
   var features = document.createElement("div");
@@ -39,12 +47,30 @@ var layerTypes = {
 
   var header = document.createElement("div");
 
-  
-
 // insert flying birds div
   var flyingBirds = document.createElement("div");
   header.appendChild(flyingBirds);
   flyingBirds.setAttribute("id", "birds");
+
+// create slider Div and hide at first
+    var sliderDiv = document.createElement("div");
+    sliderDiv.setAttribute ("id", "console");
+    header.appendChild(sliderDiv);
+    sliderDiv.innerHTML = 
+    "<h1>Timeseries predicitons</h1>\
+      <div class='session'>\
+        <h2>Area deforested (sq km)</h2>\
+        <div class='session' id='sliderbar'>\
+          <h2>Year: <label id='active-year'>2020</label></h2>\
+          <input id='slider' class='row' type='range' min='2020' max='2026' step='1' value='2020' />\
+      </div>\
+      <div class='row'>\
+        <div class='label' id='first'>100k</div>\
+        <div class='label'>137k</div>\
+        <div class='label' id='last'>195k</div>\
+        </div>\
+      </div>";
+  
   
 // get info from config file onto the webapp
   if (config.title) {
@@ -158,6 +184,7 @@ var layerTypes = {
       container.classList.add("hidden");
     }
     features.appendChild(container);
+
   });
 
   story.appendChild(features);
@@ -177,6 +204,7 @@ var layerTypes = {
     story.appendChild(footer);
   } */
 
+  // Fetch access Token to make map work
   mapboxgl.accessToken = config.accessToken;
 
   const transformRequest = (url) => {
@@ -189,7 +217,7 @@ var layerTypes = {
     };
   };
 
-// create the actual map
+// Create the actual map in the browser
   var map = new mapboxgl.Map({
     container: "map",
     style: config.style,
@@ -204,7 +232,7 @@ var layerTypes = {
   // navigation control that can be added some chapters
   // var nav = new mapboxgl.NavigationControl();
 
-  // two fake datapoints for markers
+  // two fake datapoints for markers on map
   // TODO: source with link?
   var timelapsePoints = {
     type: "FeatureCollection",
@@ -238,7 +266,7 @@ var layerTypes = {
 
   // add markers to map
   timelapsePoints.features.forEach(function (marker) {
-    // create a HTML element for each feature
+    // create an HTML element for each feature
     var el = document.createElement("div");
     el.className = "marker";
 
@@ -257,7 +285,7 @@ var layerTypes = {
       .addTo(map);
   });
 
-  // instantiate the scrollama
+  // Instantiate the scrollama
   var scroller = scrollama();
 
   map.on("load", function () {
@@ -265,34 +293,46 @@ var layerTypes = {
     // map.dragPan.enable();
     // problematic on mobile though...
 
-    // Add a data source: SAD 2019 Alerts dataset (GeoJSON data).
-    map.addSource("Alerts", {
-      type: "geojson",
-      data: "https://opendata.arcgis.com/datasets/9c4a16f9520447349159fa30abcea08b_2.geojson",
-    });
+    // Add data source: ESM geojson.
+     // 1. add the source for the timeseries layer
+     map.addSource('ESM', {
+      type: 'geojson',
+      data: 'src/data/ESM.geojson'
+      });
 
-    // Add a new layer to visualize the 2019 polygons.
-    /* map.addLayer({
-      id: "Alerts",
-      type: "fill",
-      source: "Alerts", // reference the data source
-      layout: {
-        visibility: "visible",
-      },
-      paint: {
-        "fill-color": "red", // red color fill
-        "fill-opacity": 0.7,
-      },
-    }); */
+      // 2. add the layer
+      map.addLayer({
+          'id': 'ESM',
+          'type': 'circle',
+          'source': 'ESM',
+          'paint': {
+          'circle-radius': {
+          property: 'year',
+          stops: [
+          [2020, 22],
+          [2021, 23],
+          [2022, 25],
+          [2023, 28],
+          [2024, 31],
+          [2025, 35],
+          [2026, 39.5],
+          ]
+          },
+          // Color circles by ethnicity, using a `match` expression.
+          'circle-color': '#eb5423'
+          },
+          filter: ['==', ['number', ['get', 'year']], 2020]
+      });
 
     // add data source: brazil states geojson
+    // 1. add the source for the chloropleth layer
     map.addSource("States", {
       type: "geojson",
      data: 'src/data/sumarea.geojson'
        // data: "http://localhost:8080/api/v1/amazon/area", // the route on express
     });
 
-    // Add a new layer to visualize states polygons
+    // 2. Add layer to visualize states polygons
     map.addLayer({
       id: "States",
       type: "fill",
@@ -386,7 +426,23 @@ var layerTypes = {
           }
         }
       });
+      // event listener for the slider
+        // changes the data shown according to the position of the slider
+        if (chapter.id != "ESM") {
+        document.getElementById('slider').addEventListener('input', function(e) {
+          var year = parseInt(e.target.value);
+              // update the map
+              map.setFilter('ESM', ['==', ['number', ['get', 'year']], year]);
+              // update text in the UI
+              document.getElementById('active-year').innerText = year;
+          });
+        }
   });
+
+  function createSliderElement (){
+    const div = document.getElementById("console");
+    div.style.opacity = "1";
+  }
 
   // callback function to be used in the choropleth chapters:
   // When a click event occurs on a feature in the states layer, open a popup at the
@@ -419,18 +475,8 @@ var layerTypes = {
 
   // setup resize event
   window.addEventListener("resize", scroller.resize);
+    
 
   function testCallback() {
     console.log("successful callback from chapter");
-  }
-
-  // function that switches the style of the map
-  // can be used as callback in on the chapter when we want to switch (in config.js)
-  // replace the style url with the desired style (for example 'mapbox://styles/mapbox/satellite-v9')
-  function switchStyle() {
-    map.setStyle("mapbox://styles/mapbox/satellite-v9");
-  }
-  // default syle
-  function switchToCustomStyle() {
-    map.setStyle("mapbox://styles/scanningpark/ckqgsw3wb0fbq17pfw9hwziwf/draft");
   }

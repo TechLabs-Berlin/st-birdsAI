@@ -34,6 +34,7 @@ var config = {
                 { layer: "mapbox-satellite", opacity: 0 },
                 { layer: "States", opacity: 0 },
                 { layer: "sad-alerts", opacity: 1 },
+                { layer: "ESM", opacity: 0 }
                 
             ],
             onChapterExit: [
@@ -43,7 +44,7 @@ var config = {
             ]
         },
         {
-            id: 'timeseries',
+            id: 'ESM',
             alignment: 'left',
             hidden: false,
             title: 'The Amazon rainforest is disappearing',
@@ -57,13 +58,40 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'createSliderElement',
             onChapterEnter: [
                 { layer: "sad-alerts", opacity: 1 },
-                { layer: "States", opacity: 0 }
+                { layer: "States", opacity: 0 },
+                { layer: "ESM", opacity: 1 }
             ],
             onChapterExit: [
                 { layer: "sad-alerts", opacity: 0 },
+            ]
+        },
+        {
+            id: 'ESM-2',
+            alignment: 'right',
+            hidden: true,
+            title: 'The Amazon rainforest is disappearing',
+            // image: './path/to/image/source.png',
+            description: 'Based on observed trends from the last 12 years, it is projected that if rates do not slow down, by 2026 we will see an increase of almost 200% in deforestation',
+            location: {
+                center: [-58.3, -6.35],
+                zoom: 4,
+                pitch: 0,
+                bearing: 0
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: 'createSliderElement',
+            onChapterEnter: [
+                { layer: "sad-alerts", opacity: 1 },
+                { layer: "States", opacity: 0 },
+                { layer: "ESM", opacity: 1 }
+            ],
+            onChapterExit: [
+                { layer: "sad-alerts", opacity: 0 },
+                { layer: "ESM", opacity: 0}
             ]
         },
         {
