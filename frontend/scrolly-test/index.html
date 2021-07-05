@@ -14,20 +14,22 @@
       href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
       rel="stylesheet"
     />
-    <!-- BULMA STYLES??
-      <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"/> -->
 
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
     <script src="./js/main.js"></script>
+    <script
+      type="text/javascript"
+      src="https://platform-api.sharethis.com/js/sharethis.js#property=undefined&product=undefined"
+      async="async"
+    ></script>
   </head>
   <body>
     <section class="section section__scrolly-template" id="scrolly-map">
       <div id="map"></div>
       <div id="story"></div>
     </section>
+    <section class="section section__graphs" id="graphs"></section>
     <section class="section section__counter" id="counter-div">
       <h1 class="title">Hectares of primary forest lost today in Brazil</h1>
       <div id="info"></div>
@@ -37,10 +39,14 @@
         the years 2016-2020.
         <a href="https://gfw.global/3cptlA8">Source</a>
       </p>
+      <!-- ShareThis BEGIN -->
+      <div class="sharethis-inline-share-buttons"></div>
+      <!-- ShareThis END -->
     </section>
 
     <script src="js/config.js"></script>
     <script src="js/map.js"></script>
+    <script src="js/graphs.js"></script>
     <script src="js/counter.js"></script>
   </body>
 </html>

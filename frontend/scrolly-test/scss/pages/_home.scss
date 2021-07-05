@@ -156,6 +156,21 @@
   }
 }
 
+.section__graphs {
+  background-color: whitesmoke;
+  background-blend-mode: soft-light;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+#graphs {
+  display: block;
+  -webkit-transition: 2s;
+  position: relative;
+  z-index: 9999;
+}
+
 #counter-div {
   display: block;
   -webkit-transition: 2s;

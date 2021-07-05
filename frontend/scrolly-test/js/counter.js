@@ -1,5 +1,15 @@
+
+
+//var titleCounter = document.createElement("h1");
+//    titleCounter.setAttribute("class", "title");
+//    titleCounter.innerText = TestingTesting;
+//    counterDiv.appendChild(titleText);
+
+
 var counter = document.getElementById('counter');
 var info = document.getElementById('info');
+
+
 
 // depending on what we want to show, select value for hectaresPerYear
 // var hectaresPerYear = 10000000; // 10 million hectares of forest lost per year worldwide
@@ -36,13 +46,29 @@ function update() {
     // TODO: find good comparisons to display
     if (hectaresToday > 0 && hectaresToday < 210) {
         info.innerText = "Hectare = equal to a square with 100-meter sides"
-    } else if (hectaresToday < 340) {
+    } else if (hectaresToday < 355) {
         info.innerText = "For comparison: Berlin's Tiergaten park is 210 hectares in size"
-    } else if (hectaresToday < 2500) {
-        info.innerText = "For comparison: NYC's Central Park is 340 hectares in size"
-    } else {
+    } else if (hectaresToday < 1470) {
+        info.innerText = "For comparison: Berlin's Tempelhofer Feld is 355 hectares in size"
+    } else if (hectaresToday < 3000){
+        info.innerText = "For comparison: Berlin Brandenburg Airport Willy Brandt is 1470 hectares in size"
+    } else if (hectaresToday < 3950){
+        info.innerText = "For comparison: Berlin's Grunewald Forest is approx. 3,000 hectares in size"
+    } else if (hectaresToday < 5910){
+        info.innerText = "For comparison: Berlin Mitte is 3,950 hectares in size"
+    }
+     else {
         info.innerText = "For comparison: Manhattan, NYC is 5,910 hectares in size"
     }
 }
 
 setInterval(update, 100); // run update every 100 miliseconds
+
+
+var counterDiv = document.getElementById('counter-div');
+var btnWrapper = document.createElement("div");
+btnWrapper.setAttribute("id", "btn__wrapper");
+counterDiv.appendChild(btnWrapper); 
+var btn = document.createElement("BUTTON");   // Create a <button> element
+btn.innerHTML = "CLICK ME";                   // Insert text
+document.getElementById("btn__wrapper").appendChild(btn);               // Append <button> to <body> 

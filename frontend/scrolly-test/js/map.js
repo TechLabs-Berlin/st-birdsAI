@@ -32,19 +32,21 @@ var layerTypes = {
       map.setPaintProperty(layer.layer, prop, layer.opacity, options);
     });
   }
-
+// HTML creation for the webapp
   var story = document.getElementById("story");
   var features = document.createElement("div");
   features.setAttribute("id", "features");
 
   var header = document.createElement("div");
 
-// try inserting whole html section
+  
+
+// insert flying birds div
   var flyingBirds = document.createElement("div");
   header.appendChild(flyingBirds);
   flyingBirds.setAttribute("id", "birds");
   
-
+// get info from config file onto the webapp
   if (config.title) {
     var titleText = document.createElement("h1");
     titleText.innerText = config.title;
@@ -83,12 +85,44 @@ var layerTypes = {
       <div class="bird bird--four"></div>\
     </div>'; 
   }
+  
+  if (config.headerText) {
+    var headerText = document.createElement("div");
+    headerText.setAttribute ("id", "header__text");
+    headerText.innerText = config.headerText;
+    header.appendChild(headerText);
+  }
 
-  var nav = document.createElement("div");
+// creating a navbar placeholder (logo will be added)
+  /* var nav = document.createElement("div");
   story.appendChild(nav);
   nav.setAttribute("class", "nav_placeholder");
+ */
+ // div for  auto-changing text
+  /* var sequenceText = document.createElement("div");
+  nav.appendChild(sequenceText);
+  sequenceText.setAttribute("id", "sequence"); */
+
+  // populate nav with auto-changing text !!
+  /* var example = ['Can you try to eat less meat?', 'Can you try to drink less coffee?', 'Would you care for your mobile phone and use it for longer than 4 years?', 'Can you try to eat less avocado?', 'Or dare I say...eat less chocolate?'];
+
+        textSequence(0);
+        function textSequence(i) {
+
+            if (example.length > i) {
+                setTimeout(function() {
+                    document.getElementById("sequence").innerHTML = example[i];
+                    textSequence(++i);
+                }, 4000); // 4 seconds (in milliseconds)
+
+            } else if (example.length == i) { // Loop
+                textSequence(0);
+            }
+
+        }  */
 
 
+// configure the chapters
   config.chapters.forEach((record, idx) => {
     var container = document.createElement("div");
     var chapter = document.createElement("div");
@@ -128,9 +162,10 @@ var layerTypes = {
 
   story.appendChild(features);
 
-  var footer = document.createElement("div");
+  // FOOTER
+  //var footer = document.createElement("div");
 
-  if (config.footer) {
+  /* if (config.footer) {
     var footerText = document.createElement("p");
     footerText.innerHTML = config.footer;
     footer.appendChild(footerText);
@@ -140,7 +175,7 @@ var layerTypes = {
     footer.classList.add(config.theme);
     footer.setAttribute("id", "footer");
     story.appendChild(footer);
-  }
+  } */
 
   mapboxgl.accessToken = config.accessToken;
 
@@ -154,6 +189,7 @@ var layerTypes = {
     };
   };
 
+// create the actual map
   var map = new mapboxgl.Map({
     container: "map",
     style: config.style,
@@ -236,7 +272,7 @@ var layerTypes = {
     });
 
     // Add a new layer to visualize the 2019 polygons.
-    map.addLayer({
+    /* map.addLayer({
       id: "Alerts",
       type: "fill",
       source: "Alerts", // reference the data source
@@ -247,13 +283,13 @@ var layerTypes = {
         "fill-color": "red", // red color fill
         "fill-opacity": 0.7,
       },
-    });
+    }); */
 
     // add data source: brazil states geojson
     map.addSource("States", {
       type: "geojson",
-      // data: 'sumarea.geojson'
-      data: "http://localhost:8080/api/v1/amazon/area", // the route on express
+     data: 'src/data/sumarea.geojson'
+       // data: "http://localhost:8080/api/v1/amazon/area", // the route on express
     });
 
     // Add a new layer to visualize states polygons
@@ -321,7 +357,7 @@ var layerTypes = {
           });
         }
         // when entering the timelapse chapters, make the markers visible
-        if (chapter.id == "timelapse" || chapter.id == "timelapse-big") {
+        if (chapter.id == "timelapse-big") {
           var markers = document.getElementsByClassName("marker");
           for (let i = 0; i < markers.length; i++) {
             markers[i].style.visibility = "visible";
@@ -392,5 +428,9 @@ var layerTypes = {
   // can be used as callback in on the chapter when we want to switch (in config.js)
   // replace the style url with the desired style (for example 'mapbox://styles/mapbox/satellite-v9')
   function switchStyle() {
-    map.setStyle("mapbox://styles/mapbox/light-v10");
+    map.setStyle("mapbox://styles/mapbox/satellite-v9");
+  }
+  // default syle
+  function switchToCustomStyle() {
+    map.setStyle("mapbox://styles/scanningpark/ckqgsw3wb0fbq17pfw9hwziwf/draft");
   }
