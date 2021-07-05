@@ -447,17 +447,6 @@ var layerTypes = {
           }
         }
       });
-      // event listener for the slider
-        // changes the data shown according to the position of the slider
-        if (chapter.id != "ESM") {
-        document.getElementById('slider').addEventListener('input', function(e) {
-          var year = parseInt(e.target.value);
-              // update the map
-              map.setFilter('ESM', ['==', ['number', ['get', 'year']], year]);
-              // update text in the UI
-              document.getElementById('active-year').innerText = year;
-          });
-        }
   });
 
   //hide slider element when user scrolls back to top!
@@ -471,6 +460,8 @@ var layerTypes = {
     div.style.opacity = "1";
     div.style.position = "fixed";
     div.style.top = "0";
+
+    addSliderListener()
   }
 // make slider disappear from chapter
 function removeSliderElement (){
@@ -512,6 +503,17 @@ function removeSliderElement (){
   // setup resize event
   window.addEventListener("resize", scroller.resize);
     
+  function addSliderListener() {
+  // event listener for the slider
+  // changes the data shown according to the position of the slider
+    document.getElementById('slider').addEventListener('input', function(e) {
+      var year = parseInt(e.target.value);
+      // update the map
+      map.setFilter('ESM', ['==', ['number', ['get', 'year']], year]);
+      // update text in the UI
+      document.getElementById('active-year').innerText = year;
+    });
+  }
 
   function testCallback() {
     console.log("successful callback from chapter");
