@@ -217,7 +217,7 @@ var layerTypes = {
         },
         properties: {
           title: "Timelapse",
-          description: "Deforestation near Santarém, Pará, 2011-2021",
+          description: "Deforestation near Tenharim, Rondonia, 2011-2021",
           media: '<img class="tlapse" src="./src/img/timelapse.gif"/>',
         },
       },
@@ -229,7 +229,7 @@ var layerTypes = {
         },
         properties: {
           title: "Timelapse",
-          description: "Deforestation near Tenharim, Rondonia, 2011-2021",
+          description: "Deforestation near Santarém, Pará, 2011-2021",
           media: '<img class="tlapse" src="./src/img/timelapse1.gif"/>',
         },
       },
