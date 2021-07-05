@@ -302,7 +302,7 @@ var layerTypes = {
         "fill-color": [
           "step",
           ["get", "Area_km"],
-          "#ffeda0",
+          "#e0cb80",
           50,
           "#ffeda0",
           250,
@@ -314,11 +314,11 @@ var layerTypes = {
           4000,
           "#fc4e2a",
           6000,
-          "#e31a1c",
+          "#df8d44",
           7000,
-          "hsl(348, 100%, 37%)",
+          "#eb5423",
           8000,
-          "#bd0026",
+          "#d6233f",
         ],
       },
     });

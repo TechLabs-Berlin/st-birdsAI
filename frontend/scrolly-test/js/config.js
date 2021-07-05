@@ -82,7 +82,7 @@ var config = {
             callback: 'addStatePopups',
             onChapterEnter: [
                 { layer: "sad-alerts", opacity: 0 },
-                { layer: "States", opacity: 0.7 }
+                { layer: "States", opacity: 0.8 }
             ],
             onChapterExit: [
                 { layer: "sad-alerts", opacity: 0 }
@@ -106,7 +106,7 @@ var config = {
             callback: '',
             onChapterEnter: [
                 { layer: "sad-alerts", opacity: 0 },
-                { layer: "States", opacity: 0.7 }
+                { layer: "States", opacity: 0.8 }
             ],
             onChapterExit: []
         },
