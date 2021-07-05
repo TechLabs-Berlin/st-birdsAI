@@ -48,6 +48,7 @@ var config = {
             alignment: 'left',
             hidden: false,
             title: 'The Amazon rainforest is disappearing',
+            slider:'yes',
             // image: './path/to/image/source.png',
             description: 'Based on observed trends from the last 12 years, it is projected that if rates do not slow down, by 2026 we will see an increase of almost 200% in deforestation',
             location: {
@@ -58,7 +59,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: 'createSliderElement',
+            callback: 'removeSliderElement',
             onChapterEnter: [
                 { layer: "sad-alerts", opacity: 1 },
                 { layer: "States", opacity: 0 },
@@ -109,7 +110,7 @@ var config = {
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
-            callback: '',
+            callback: 'removeSliderElement',
             onChapterEnter: [{ layer: "mapbox-satellite", opacity: 1 },
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0 }
