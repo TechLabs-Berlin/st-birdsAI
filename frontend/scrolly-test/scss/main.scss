@@ -13,7 +13,8 @@
 @import "layout/header", "layout/footer", "layout/storytelling-template";
 
 // 5. Components
-@import "components/button", "components/counter", "components/slider";
+@import "components/button", "components/counter", "components/slider",
+  "components/piechart";
 
 // 6. Page-specific styles
 @import "pages/home";

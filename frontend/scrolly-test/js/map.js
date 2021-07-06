@@ -50,27 +50,7 @@ var layerTypes = {
 // insert flying birds div
   var flyingBirds = document.createElement("div");
   header.appendChild(flyingBirds);
-  flyingBirds.setAttribute("id", "birds");
-
-// create slider Div and hide at first
-    /* var sliderDiv = document.createElement("div");
-    sliderDiv.setAttribute ("id", "console");
-    header.appendChild(sliderDiv);
-    sliderDiv.innerHTML = 
-    "<h1>Timeseries predicitons</h1>\
-      <div class='session'>\
-        <h2>Area deforested (sq km)</h2>\
-        <div class='session' id='sliderbar'>\
-          <h2>Year: <label id='active-year'>2020</label></h2>\
-          <input id='slider' class='row' type='range' min='2020' max='2026' step='1' value='2020' />\
-      </div>\
-      <div class='row'>\
-        <div class='label' id='first'>100k</div>\
-        <div class='label'>137k</div>\
-        <div class='label' id='last'>195k</div>\
-        </div>\
-      </div>"; */
-  
+  flyingBirds.setAttribute("id", "birds");  
   
 // get info from config file onto the webapp
   if (config.title) {

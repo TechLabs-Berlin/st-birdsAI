@@ -1,9 +1,15 @@
 
 
-//var titleCounter = document.createElement("h1");
-//    titleCounter.setAttribute("class", "title");
-//    titleCounter.innerText = TestingTesting;
-//    counterDiv.appendChild(titleText);
+document.getElementById('counter-div').innerHTML = 
+'<h1 class="title">Hectares of primary forest lost today in Brazil</h1>\
+      <div id="info"></div>\
+      <div id="counter"></div>\
+      <p id="disclaimer">\
+        This is an estimate based on the average rate of primary forest loss in\
+        the years 2016-2020.\
+        <a href="https://gfw.global/3cptlA8">Source</a>\
+      </p>';
+
 
 
 var counter = document.getElementById('counter');
@@ -64,8 +70,9 @@ function update() {
 
 setInterval(update, 100); // run update every 100 miliseconds
 
-
+// share button section
 var counterDiv = document.getElementById('counter-div');
+
 var btnWrapper = document.createElement("div");
 btnWrapper.setAttribute("id", "btn__wrapper");
 counterDiv.appendChild(btnWrapper); 
