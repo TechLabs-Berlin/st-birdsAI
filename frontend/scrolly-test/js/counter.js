@@ -44,7 +44,7 @@ function update() {
     if (hectaresToday > 999) {
         counter.innerText = firstDigit + ',' + restDigits;
     } else {
-        counter.innerText = hectaresToday;
+        counter.innerText = hectaresToday.toFixed(2);
     }
 
     // this part adds a line of text to help illustrate what the numbers mean
