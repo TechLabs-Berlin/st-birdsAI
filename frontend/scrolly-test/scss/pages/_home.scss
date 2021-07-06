@@ -159,10 +159,7 @@
 .section__graphs {
   background-color: whitesmoke;
   height: 100vh;
-}
-#graphs {
-  display: block;
-  -webkit-transition: 2s;
+  padding: 15px;
   position: relative;
   z-index: 9999;
 }

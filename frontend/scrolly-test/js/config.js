@@ -97,7 +97,7 @@ var config = {
         },
         {
             id: 'timelapse',
-            alignment: 'left',
+            alignment: 'right',
             hidden: false,
             title: '',
             // image: './path/to/image/source.png',

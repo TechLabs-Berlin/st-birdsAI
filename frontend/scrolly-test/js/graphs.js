@@ -1,29 +1,18 @@
-var graphPage = document.getElementById('graphs');
-graphPage.innerHTML =
-'<div class="title text-center mb-5" id="section-title">\
-                <h1>What are the Drivers of Deforestation</h1>\
-            </div>';
-
-var chartWrapper = document.createElement("div");
-chartWrapper.setAttribute("id", "graph__wrapper");
-graphPage.appendChild(chartWrapper); 
-
-var graphWrapper = document.getElementById('graph__wrapper');
+var graphWrapper = document.getElementById('graph-wrapper');
 
 
 var pieChart = document.createElement("div");  
 pieChart.setAttribute("id", "piechart");  
-pieChart.classList.add("wrapper");              
+pieChart.classList.add("column");              
 graphWrapper.appendChild(pieChart); 
 pieChart.innerHTML=
-'<div class="container d-flex flex-column justify-content-center align-items-center">\
-            <div class="chart-wrapper">\
+'<div class="chart-wrapper">\
                 <canvas id="myChart"></canvas>\
-            </div>\
-        </div>';
+            </div>';
 
 var pieChartText = document.createElement("div");  
 pieChartText.setAttribute("id", "piechart-text"); 
+pieChartText.classList.add("column");
 graphWrapper.appendChild(pieChartText);
 
 var graphTextBox = document.getElementById('piechart-text');
@@ -35,10 +24,8 @@ graphTextBox.appendChild(pieChartTitle);
 
 var pieChartPar = document.createElement("p");
 pieChartPar.setAttribute("id", "piechart-paragraph");
-pieChartPar.innerText = "Deforestation in Brazil is mainly commodity driven. The key drivers are expansion of pasture for beef production, croplands for soy, and palm oil.\n\
-Since 1990, the production of crops, livestock*, and palm oil have significantly increased. In contrast, the forest area has decreased dramatically.\n\ \n\
-Livestock is commonly defined as domesticated animals raised in an agricultural setting to produce labor and commodities such as meat, eggs, milk, fur, leather, and wool (Wikipedia). \n\ \n\
-In 2018, Brazil set a world record in **beef export**, worth of $6 billion. A slaughterhouse in Jaru, Rondônia will slaughter one cow per 8 seconds. Due to the appetite for (any kind of) meat, the Amazon shrinked 17% in the last 50 years.";
+pieChartPar.innerText = "Deforestation in Brazil is mainly commodity driven: meat, metals and palm oil. Our consumer choices contribute directly to deforestation\n\
+Since 1990, as the production of crops and livestock have significantly increased. The  remaining forest area has diminished dramatically.";
 graphTextBox.appendChild(pieChartPar);
 
 
