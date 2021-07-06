@@ -1,4 +1,8 @@
 var graphPage = document.getElementById('graphs');
+graphPage.innerHTML =
+'<div class="title text-center mb-5" id="piechart-title">\
+                <h1>What are the Drivers of Deforestation</h1>\
+            </div>';
 
 var chartWrapper = document.createElement("div");
 chartWrapper.setAttribute("id", "graph__wrapper");
@@ -6,15 +10,13 @@ graphPage.appendChild(chartWrapper);
 
 var graphWrapper = document.getElementById('graph__wrapper');
 
+
 var pieChart = document.createElement("div");  
 pieChart.setAttribute("id", "piechart");  
 pieChart.classList.add("wrapper");              
 graphWrapper.appendChild(pieChart); 
 pieChart.innerHTML=
 '<div class="container d-flex flex-column justify-content-center align-items-center">\
-            <div class="title text-center mb-5">\
-                <h1>What are the Drivers of Deforestation</h1>\
-            </div>\
             <div class="chart-wrapper">\
                 <canvas id="myChart"></canvas>\
             </div>\
