@@ -95,7 +95,7 @@ var graphTextBox = document.getElementById('linechart-text');
 
 var lineChartPar = document.createElement("p");
 lineChartPar.classList.add("chart-paragraph")
-lineChartPar.innerText = "Since 1990, as the production of crops and livestock have significantly increased. The remaining forest area has diminished dramatically.";
+lineChartPar.innerText = "Three key drivers for deforestation of the Amazon rainforest are beef production, croplands for soy, and palm oil. Since 1990, as the production of crops and livestock have significantly increased. The remaining forest area has diminished dramatically.";
 graphTextBox.appendChild(lineChartPar);
 
 // display linechart
