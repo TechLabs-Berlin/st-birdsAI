@@ -156,12 +156,15 @@
   }
 }
 
-.section__graphs {
-  background-color: whitesmoke;
-  height: 100vh;
-  padding: 15px;
-  position: relative;
-  z-index: 9999;
+.section {
+  &__graphs,
+  &__graphs2 {
+    background-color: whitesmoke;
+    height: 100vh;
+    padding: 15px;
+    position: relative;
+    z-index: 9999;
+  }
 }
 
 #counter-div {
