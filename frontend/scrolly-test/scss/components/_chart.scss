@@ -3,6 +3,11 @@
   height: 400px;
   margin: 0 auto;
 }
+.chart-wrapper2 {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+}
 
 .column {
   display: flex;
@@ -25,6 +30,17 @@
   overflow: hidden;
   min-width: 0;
 }
+
+.chart-paragraph {
+  padding: 13px 25px;
+  line-height: 20px;
+  font-size: 13px;
+  border-radius: 18px;
+  color: #000;
+  background-color: #fafafa;
+  font-family: ObjectSansThin, sans-serif;
+}
+
 #graph-wrapper,
 #graph2-wrapper {
   display: flex;
@@ -37,7 +53,7 @@
   .column {
     flex: 1;
   }
-  .chart-wrapper {
+  .chart-wrapper .chart-wrapper2 {
     width: 90vw;
     margin: 0 auto;
   }

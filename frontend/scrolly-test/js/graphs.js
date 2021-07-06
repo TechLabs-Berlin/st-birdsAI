@@ -2,14 +2,7 @@
 
 var graphWrapper = document.getElementById('graph-wrapper');
 
-var pieChart = document.createElement("div");  
-pieChart.setAttribute("id", "piechart");  
-pieChart.classList.add("column");              
-graphWrapper.appendChild(pieChart); 
-pieChart.innerHTML=
-'<div class="chart-wrapper">\
-                <canvas id="myChart"></canvas>\
-            </div>';
+
 
 var pieChartText = document.createElement("div");  
 pieChartText.setAttribute("id", "piechart-text"); 
@@ -24,11 +17,18 @@ pieChartTitle.innerText = 'Livestock and Soy';
 graphTextBox.appendChild(pieChartTitle);
 
 var pieChartPar = document.createElement("p");
-pieChartPar.setAttribute("id", "piechart-paragraph");
-pieChartPar.innerText = "Deforestation in Brazil is mainly commodity driven: meat, metals and palm oil. Our consumer choices contribute directly to deforestation\n\
-Since 1990, as the production of crops and livestock have significantly increased. The  remaining forest area has diminished dramatically.";
+pieChartPar.classList.add("chart-paragraph");
+pieChartPar.innerText = "Deforestation in Brazil is mainly commodity driven: meat, metals and palm oil. Our consumer choices contribute directly to deforestation.";
 graphTextBox.appendChild(pieChartPar);
 
+var pieChart = document.createElement("div");  
+pieChart.setAttribute("id", "piechart");  
+pieChart.classList.add("column");              
+graphWrapper.appendChild(pieChart); 
+pieChart.innerHTML=
+'<div class="chart-wrapper">\
+                <canvas id="myChart"></canvas>\
+            </div>';
 
 
 // display Piechart
@@ -82,7 +82,21 @@ lineChart.setAttribute("id", "linechart");
 lineChart.classList.add("column");              
 graphWrapper2.appendChild(lineChart); 
 lineChart.innerHTML=
-'<canvas id="myChart2" width="400" height="200"></canvas>';
+'<div class="chart-wrapper2">\
+                <canvas id="myChart2"></canvas>\
+                </div>';
+
+var lineChartText = document.createElement("div");  
+lineChartText.setAttribute("id", "linechart-text"); 
+lineChartText.classList.add("column");
+graphWrapper2.appendChild(lineChartText);
+
+var graphTextBox = document.getElementById('linechart-text');
+
+var lineChartPar = document.createElement("p");
+lineChartPar.classList.add("chart-paragraph")
+lineChartPar.innerText = "Since 1990, as the production of crops and livestock have significantly increased. The remaining forest area has diminished dramatically.";
+graphTextBox.appendChild(lineChartPar);
 
 // display linechart
 
