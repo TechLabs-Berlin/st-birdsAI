@@ -109,7 +109,7 @@ async function setup() {
   const ctx = document.getElementById('myChart2').getContext('2d');
   const dataArea = await getData();
   const myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
       labels: dataArea.years,
       datasets: [
@@ -143,7 +143,7 @@ async function setup() {
           label: 'Forest area in km²',
           yAxisID: 'Forest area in km²',
           data: dataArea.forest,
-          fill: false,
+          fill: true,
           borderColor: 'rgba(42, 157, 143, 1)',
           backgroundColor: 'rgba(42, 157, 143, 0.5)',
           borderWidth: 1,
@@ -168,6 +168,11 @@ async function setup() {
             },
           },
         ],
+      },
+      elements: {
+        point:{
+            radius: 0
+        }
       },
     },
   });
