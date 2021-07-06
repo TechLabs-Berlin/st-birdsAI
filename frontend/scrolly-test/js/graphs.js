@@ -1,6 +1,6 @@
 var graphPage = document.getElementById('graphs');
 graphPage.innerHTML =
-'<div class="title text-center mb-5" id="piechart-title">\
+'<div class="title text-center mb-5" id="section-title">\
                 <h1>What are the Drivers of Deforestation</h1>\
             </div>';
 
@@ -28,13 +28,17 @@ graphWrapper.appendChild(pieChartText);
 
 var graphTextBox = document.getElementById('piechart-text');
 
-var pieChartTitle = document.createElement("h1");
+var pieChartTitle = document.createElement("h2");
 pieChartTitle.setAttribute("id", "piechart-title");
+pieChartTitle.innerText = 'Livestock and Soy';
 graphTextBox.appendChild(pieChartTitle);
 
 var pieChartPar = document.createElement("p");
 pieChartPar.setAttribute("id", "piechart-paragraph");
-pieChartPar.innerText = 'something is here';
+pieChartPar.innerText = "Deforestation in Brazil is mainly commodity driven. The key drivers are expansion of pasture for beef production, croplands for soy, and palm oil.\n\
+Since 1990, the production of crops, livestock*, and palm oil have significantly increased. In contrast, the forest area has decreased dramatically.\n\ \n\
+Livestock is commonly defined as domesticated animals raised in an agricultural setting to produce labor and commodities such as meat, eggs, milk, fur, leather, and wool (Wikipedia). \n\ \n\
+In 2018, Brazil set a world record in **beef export**, worth of $6 billion. A slaughterhouse in Jaru, Rondônia will slaughter one cow per 8 seconds. Due to the appetite for (any kind of) meat, the Amazon shrinked 17% in the last 50 years.";
 graphTextBox.appendChild(pieChartPar);
 
 

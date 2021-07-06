@@ -12,9 +12,19 @@ body {
   margin: 0 auto;
 }
 
-#piechart-title {
+#section-title {
   text-align: center;
   padding-top: 1em;
+}
+
+#piechart-title {
+  text-align: center;
+  padding: 1em 0;
+}
+#piechart-text {
+  padding: 10px;
+  overflow: hidden;
+  min-width: 0;
 }
 #graph__wrapper {
   display: grid;
