@@ -52,12 +52,12 @@ const myChart = new Chart(ctx, {
         },
         plugins: {
             datalabels: {
-                color: ' #FF0000',
+                color: '#ffffff',
                 anchor: 'end',
                 align: 'start',
                 offset: -10,
                 borderWidth: 2,
-                borderColor: ' #FFFFFF',
+                borderColor: '#ffffff',
                 borderRadius: 25,
                 backgroundColor: (context) => {
                     return context.dataset.backgroundColor;

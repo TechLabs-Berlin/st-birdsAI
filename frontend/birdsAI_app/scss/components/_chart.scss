@@ -25,7 +25,8 @@
   text-align: center;
   padding: 1em 0;
 }
-#piechart-text {
+#piechart-text,
+#linechart-text {
   padding: 10px;
   overflow: hidden;
   min-width: 0;
@@ -53,8 +54,9 @@
   .column {
     flex: 1;
   }
-  .chart-wrapper .chart-wrapper2 {
-    width: 90vw;
+  .chart-wrapper2 {
+    width: 380px;
+    height: auto;
     margin: 0 auto;
   }
 }
