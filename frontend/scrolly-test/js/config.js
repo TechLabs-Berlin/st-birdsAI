@@ -54,7 +54,7 @@ var config = {
             description: 'Based on observed trends from the last 12 years, it is projected that if rates do not slow down, by 2026 we will see an increase of almost 200% in deforestation',
             location: {
                 center: [-58.3, -6.35],
-                zoom: 4,
+                zoom: 3.5,
                 pitch: 0,
                 bearing: 0
             },
@@ -64,7 +64,7 @@ var config = {
             onChapterEnter: [
                 { layer: "sad-alerts", opacity: 1 },
                 { layer: "States", opacity: 0 },
-                { layer: "ESM", opacity: 1 }
+                { layer: "ESM", opacity: 0.6 }
             ],
             onChapterExit: [
                 { layer: "sad-alerts", opacity: 0 },
@@ -79,7 +79,7 @@ var config = {
             description: 'Based on observed trends from the last 12 years, it is projected that if rates do not slow down, by 2026 we will see an increase of almost 200% in deforestation',
             location: {
                 center: [-58.3, -6.35],
-                zoom: 4,
+                zoom: 3.5,
                 pitch: 0,
                 bearing: 0
             },
@@ -89,7 +89,7 @@ var config = {
             onChapterEnter: [
                 { layer: "sad-alerts", opacity: 1 },
                 { layer: "States", opacity: 0 },
-                { layer: "ESM", opacity: 1 }
+                { layer: "ESM", opacity: 0.8 }
             ],
             onChapterExit: [
                 { layer: "sad-alerts", opacity: 0 },
@@ -112,7 +112,8 @@ var config = {
             mapAnimation: 'flyTo',
             rotateAnimation: false,
             callback: 'removeSliderElement',
-            onChapterEnter: [{ layer: "mapbox-satellite", opacity: 1 },
+            onChapterEnter: [
+                { layer: "mapbox-satellite", opacity: 1 },
                 { layer: "sad-alerts", opacity: 0 },
                 { layer: "States", opacity: 0 }
             ],
