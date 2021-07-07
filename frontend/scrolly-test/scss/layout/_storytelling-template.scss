@@ -6,6 +6,7 @@ body {
   padding: 0;
   font-family: ObjectSans;
   color: #000;
+  font-size: 16px;
 }
 a,
 a:hover,
@@ -38,18 +39,30 @@ a:visited {
   padding: 2vh 2vw;
   text-align: center;
 }
-#header__text {
+#header h1 {
+  font-size: 2.75em;
+  padding-top: 102px;
+}
+#header__text,
+#swipe__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 80vh;
   width: 50vw;
   margin: 0 auto;
-  color: #fafafa;
-  opacity: 0.9;
-  animation: fade-slide-down 2s 0.5s cubic-bezier(0, 0.5, 0, 1) forwards;
+  font-size: 1.46em;
+  font-weight: bold;
+}
+
+#header__text {
+  color: $brand-color-secondary;
+  padding-top: 35vh;
+}
+#swipe__text {
+  color: $brand-color-primary;
+  padding-top: 20vh;
 }
 
 #header p,
@@ -126,6 +139,10 @@ a:visited {
   .fully {
     width: 90vw;
     margin: 0 auto;
+  }
+  #header__text,
+  #swipe__text {
+    width: 80vw;
   }
 }
 

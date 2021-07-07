@@ -52,7 +52,7 @@ var layerTypes = {
   header.appendChild(flyingBirds);
   flyingBirds.setAttribute("id", "birds");  
   
-// get info from config file onto the webapp
+// get info from config file onto the page
   if (config.title) {
     var titleText = document.createElement("h1");
     titleText.innerText = config.title;
@@ -99,7 +99,12 @@ var layerTypes = {
     headerText.innerText = config.headerText;
     header.appendChild(headerText);
   }
-
+  if (config.swipeText) {
+    var swipeText = document.createElement("div");
+    swipeText.setAttribute ("id", "swipe__text");
+    swipeText.innerText = config.swipeText;
+    header.appendChild(swipeText);
+  }
 // creating a navbar placeholder (logo will be added)
   /* var nav = document.createElement("div");
   story.appendChild(nav);

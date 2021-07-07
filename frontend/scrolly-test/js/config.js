@@ -9,7 +9,8 @@ var config = {
     title: 'BirdsAI',
     subtitle: '',
     byline: '',
-    headerText: 'A story of the past, present, and future of the Amazon rainforest in Brazil from a bird\'s-eye view. \n\nSwipe up to begin',
+    headerText: 'A story of the past, present, and future of the Amazon rainforest in Brazil from a bird\'s-eye view.',
+    swipeText: 'Swipe up to begin',
     footer: 'Source: source citations, etc.',
     chapters: [
         {
