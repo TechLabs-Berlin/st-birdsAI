@@ -54,6 +54,7 @@ a:visited {
   margin: 0 auto;
   font-size: 1.46em;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
 #header__text {
@@ -168,10 +169,10 @@ img.tlapse {
 .mapboxgl-popup-close-button:hover {
   background-color: rgba(151, 175, 165, 0.05);
 }
-button:hover {
+/* button:hover {
   color: #ffffff !important;
   //background-color: #000;
   border-color: #ffffff !important;
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-}
+} */

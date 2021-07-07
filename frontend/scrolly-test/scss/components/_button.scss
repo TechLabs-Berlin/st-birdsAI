@@ -1,24 +1,25 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------*/
+/* This file contains all styles related to the button component. */
+/* ----------------------------------------------------------------------------- */
 button {
-  text-transform: uppercase;
-  text-decoration: none;
-  background: #ffffff;
-  padding: 20px;
-  border: 1px solid #494949 !important;
-  display: inline-block;
-  transition: all 0.4s ease 0s;
-  border-radius: 18px;
-
+  background-color: transparent !important;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
   &:hover {
-    color: #ffffff !important;
-    background-color: #000;
-    border-color: #494949 !important;
-    transition: all 0.4s ease 0s;
+    transform: scale(1.1);
   }
 }
 
 #btn__wrapper {
-  margin: 6em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  padding-top: 27px;
 }

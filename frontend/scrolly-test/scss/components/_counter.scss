@@ -12,7 +12,11 @@
   font-family: ObjectSans;
   text-transform: uppercase;
   font-size: 1.46em;
-  line-height: 1.68em;
+  line-height: 27px;
+}
+
+.share {
+  padding-top: 9vh;
 }
 
 #highlight-word {
@@ -42,5 +46,5 @@
   color: white;
 }
 #info {
-  padding-top: 10.46vh;
+  padding-top: 10vh;
 }

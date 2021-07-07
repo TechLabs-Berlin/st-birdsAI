@@ -73,9 +73,27 @@ setInterval(update, 100); // run update every 100 miliseconds
 // share button section
 var counterDiv = document.getElementById('counter-div');
 
+var shareStory = document.createElement("div");
+counterDiv.appendChild(shareStory);
+shareStory.innerHTML = '<img class="share"\
+src="../src/img/share.svg"\
+alt="share story">';
+
 var btnWrapper = document.createElement("div");
 btnWrapper.setAttribute("id", "btn__wrapper");
 counterDiv.appendChild(btnWrapper); 
-var btn = document.createElement("BUTTON");   // Create a <button> element
-btn.innerHTML = "CLICK ME";                   // Insert text
-document.getElementById("btn__wrapper").appendChild(btn);               // Append <button> to <body> 
+var btn1 = document.createElement("BUTTON");   // Create a <button> element
+btn1.innerHTML = '<img class="social__twit"\
+src="../src/img/twit.svg"\
+alt="twitter icon">';
+document.getElementById("btn__wrapper").appendChild(btn1);    
+var btn2 = document.createElement("BUTTON");   // Create a <button> element
+btn2.innerHTML = '<img class="social__insta"\
+src="../src/img/insta.svg"\
+alt="instagram icon">';                   // Insert text
+document.getElementById("btn__wrapper").appendChild(btn2);  
+var btn3 = document.createElement("BUTTON");   // Create a <button> element
+btn3.innerHTML = '<img class="social__fb"\
+src="../src/img/fb.svg"\
+alt="facebook icon">';                    // Insert text
+document.getElementById("btn__wrapper").appendChild(btn3);             // Append <button> to <body> 
