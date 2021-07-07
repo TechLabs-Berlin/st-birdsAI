@@ -115,7 +115,7 @@ async function setup() {
       datasets: [
         {
           label: 'Crop production index',
-          yAxisID: 'Crop production index',
+          yAxisID: 'crop',
           data: dataArea.crop,
           fill: false,
           borderColor: 'rgba(255, 99, 132, 1)',
@@ -124,7 +124,7 @@ async function setup() {
         },
         {
           label: 'Livestock production index',
-          yAxisID: 'Livestock production index',
+          yAxisID: 'livestock',
           data: dataArea.livestock,
           fill: false,
           borderColor: 'rgba(99, 132, 255, 1)',
@@ -132,7 +132,8 @@ async function setup() {
           borderWidth: 1,
         },
         {
-          label: 'Oil palm fruit Area harvested km²',
+          label: 'Palm oil harvest area (km²)',
+          yAxisID: 'palm',
           data: dataArea.oil_palm,
           fill: false,
           borderColor: 'rgba(233, 196, 106, 1)',
@@ -140,8 +141,8 @@ async function setup() {
           borderWidth: 1,
         },
         {
-          label: 'Forest area in km²',
-          yAxisID: 'Forest area in km²',
+          label: 'Remaining Forest Area (km²)',
+          yAxisID: 'forest',
           data: dataArea.forest,
           fill: true,
           borderColor: 'rgba(42, 157, 143, 1)',
@@ -152,29 +153,60 @@ async function setup() {
     },
     options: {
       scales: {
-        yAxes: [
-          {
-            id: 'Forest area in km²',
-            type: 'linear',
-            position: 'left',
+        palm: {
+          type: 'linear',
+          display: false,
+          position: 'left',
+          grid: {
+            drawOnChartArea: false,
           },
-          {
-            id: 'Crop production index',
-            type: 'linear',
-            position: 'right',
-            ticks: {
-              max: 110,
-              min: 35,
-            },
+        },
+        crop: {
+          type: 'linear',
+          display: false,
+          position: 'right',
+          grid: {
+            drawOnChartArea: false,
           },
-        ],
+        },
+        livestock: {
+          type: 'linear',
+          display: false,
+          position: 'right',
+  
+          // grid line settings
+          grid: {
+            drawOnChartArea: false,
+          },
+        },
+        forest: {
+          type: 'linear',
+          display: true,
+          position: 'left',
+  
+          // grid line settings
+          grid: {
+            drawOnChartArea: true, // only show the grid for the forest ares graph
+          },
+          ticks: {
+            maxRotation: 60,
+            minRotation: 30,
+
+            // covert the ticks to a more compact format
+            callback: function(value, index, values) {
+                valueString = '' + value
+                return valueString[0] + '.' + valueString[1] + ' Mill.';
+            }
+          }
+        },
       },
       elements: {
-        point:{
-            radius: 0
-        }
+        point: {
+          radius: 0.5
+        },
       },
-    },
+      aspectRatio: 1.25
+    }
   });
 }
 
