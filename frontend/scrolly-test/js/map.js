@@ -162,7 +162,7 @@ var layerTypes = {
     sliderDiv.setAttribute ("id", "console");
     header.appendChild(sliderDiv);
     sliderDiv.innerHTML = 
-    "<h1>Timeseries predicitons</h1>\
+    "<h1 id='slider-header'>Timeseries predicitons</h1>\
       <div class='session'>\
         <h2>Area deforested (sq km)</h2>\
         <div class='session' id='sliderbar'>\
@@ -195,20 +195,6 @@ var layerTypes = {
 
   story.appendChild(features);
 
-  // FOOTER
-  //var footer = document.createElement("div");
-
-  /* if (config.footer) {
-    var footerText = document.createElement("p");
-    footerText.innerHTML = config.footer;
-    footer.appendChild(footerText);
-  }
-
-  if (footer.innerText.length > 0) {
-    footer.classList.add(config.theme);
-    footer.setAttribute("id", "footer");
-    story.appendChild(footer);
-  } */
 
   // Fetch access Token to make map work
   mapboxgl.accessToken = config.accessToken;
@@ -435,10 +421,10 @@ var layerTypes = {
   });
 
   //hide slider element when user scrolls back to top!
-  function hideSLiderElement (){
+  /* function hideSLiderElement (){
     const div = document.getElementById("console");
     div.style.opacity = "0";
-  }
+  } */
 // make slider visible on chapter
   function createSliderElement (){
     const div = document.getElementById("console");
