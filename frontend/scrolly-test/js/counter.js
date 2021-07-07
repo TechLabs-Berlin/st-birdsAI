@@ -1,9 +1,9 @@
 
 
 document.getElementById('counter-div').innerHTML = 
-'<h1 class="title">Hectares of primary forest lost today in Brazil</h1>\
-      <div id="info"></div>\
+'<h1 class="title">Hectares of primary forest <br><span id="highlight-word">lost today in Brazil</span></h1>\
       <div id="counter"></div>\
+      <div id="info"></div>\
       <p id="disclaimer">\
         This is an estimate based on the average rate of primary forest loss in\
         the years 2016-2020.\
@@ -53,18 +53,18 @@ function update() {
     if (hectaresToday > 0 && hectaresToday < 210) {
         info.innerText = "Hectare = equal to a square with 100-meter sides"
     } else if (hectaresToday < 355) {
-        info.innerText = "For comparison: Berlin's Tiergaten park is 210 hectares in size"
+        info.innerText = "Berlin's Tiergaten park is 210 hectares in size"
     } else if (hectaresToday < 1470) {
-        info.innerText = "For comparison: Berlin's Tempelhofer Feld is 355 hectares in size"
+        info.innerText = "Berlin's Tempelhofer Feld is 355 hectares in size"
     } else if (hectaresToday < 3000){
-        info.innerText = "For comparison: Berlin Brandenburg Airport Willy Brandt is 1470 hectares in size"
+        info.innerText = "Berlin Brandenburg Airport Willy Brandt is 1470 hectares in size"
     } else if (hectaresToday < 3950){
-        info.innerText = "For comparison: Berlin's Grunewald Forest is approx. 3,000 hectares in size"
+        info.innerText = "Berlin's Grunewald Forest is approx. 3,000 hectares in size"
     } else if (hectaresToday < 5910){
-        info.innerText = "For comparison: Berlin Mitte is 3,950 hectares in size"
+        info.innerText = "Berlin Mitte is 3,950 hectares in size"
     }
      else {
-        info.innerText = "For comparison: Manhattan, NYC is 5,910 hectares in size"
+        info.innerText = "Manhattan, NYC is 5,910 hectares in size"
     }
 }
 

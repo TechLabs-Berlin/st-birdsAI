@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
 }
-
+/* 
 //.container {
 //z-index: 1;
 //position: relative;
@@ -16,7 +16,7 @@
 // width: 100%;
 //min-height: 100vh;
 // min-height: 35rem;
-//}
+//} */
 
 .bird {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
@@ -161,16 +161,12 @@
   &__graphs2 {
     background-color: #242424;
     height: 100vh;
-    padding: 15px;
+    padding: 5.5vh 2.36vw;
     position: relative;
     z-index: 9999;
   }
 }
 
-#counter-div {
-  display: block;
-  -webkit-transition: 2s;
-}
 .section__counter {
   background-image: url("/src/img/burned\ forest.jpg");
   background-blend-mode: soft-light;
@@ -180,7 +176,12 @@
   height: 100vh;
 }
 
-#scrolly-map {
+// hide or show using opacity or display
+/* #scrolly-map {
   opacity: 1;
   -webkit-transition: 2s;
 }
+#counter-div {
+  display: block;
+  -webkit-transition: 2s;
+} */

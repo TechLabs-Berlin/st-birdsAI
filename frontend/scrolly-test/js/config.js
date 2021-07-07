@@ -51,7 +51,7 @@ var config = {
             title: 'The Amazon rainforest is disappearing',
             slider:'yes',
             // image: './path/to/image/source.png',
-            description: 'Based on observed trends from the last 12 years, it is projected that if rates do not slow down, by 2026 we will see an increase of almost 200% in deforestation',
+            description: 'Based on observed trends from the last 12 years, it is projected that if rates do not slow down, we will see an increase of almost 200% in deforestation by 2026. ',
             location: {
                 center: [-58.3, -6.35],
                 zoom: 3.5,
@@ -102,7 +102,7 @@ var config = {
             hidden: false,
             title: '',
             // image: './path/to/image/source.png',
-            description: "Forest loss in the amazon can even be seen clearly from space. Tap the markers to open a time lapse view",
+            description: "Forest loss in the Amazon can be seen clearly, even from space. Tap the markers to open a time lapse view.",
             location: {
                 center: [-56.3, -5.35],
                 zoom: 4.5,
@@ -173,7 +173,7 @@ var config = {
             hidden: false,
             title: 'Deforestation per state',
             // image: './path/to/image/source.png',
-            description: "The situation is worse in some states than others. In the state of Rondônia, 8,561 square km of rainforest were cut down since 2008 - an area equivalent to 10 times the size of Berlin.",
+            description: "The situation is worse in some states than in others. In the state of Rondônia, 8,561 square km of rainforest were cut down since 2008 - an area equivalent to 10 times the size of Berlin. \nTap states to see deforestation rates",
             location: {
                 center: [-56.3, -5.35],
                 zoom: 3,
@@ -213,6 +213,7 @@ var config = {
                 { layer: "States", opacity: 0.8 }
             ],
             onChapterExit: [
+                { layer: "States", opacity: 0 }
                 
             ]
         },

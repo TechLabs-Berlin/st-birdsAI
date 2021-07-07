@@ -5,21 +5,42 @@
 .section__counter {
   padding: 1em;
 }
+
+.section__counter .title {
+  color: white;
+  padding-top: 10vh;
+  font-family: ObjectSans;
+  text-transform: uppercase;
+  font-size: 1.46em;
+  line-height: 1.68em;
+}
+
+#highlight-word {
+  color: $brand-color-primary;
+}
 #counter-div {
   display: flex;
   flex-direction: column;
   position: relative;
   width: 100%;
-  min-height: 70vh;
+  //min-height: 70vh;
   background-color: gray;
   text-align: center;
 }
 #counter {
-  font-size: 2em;
-  color: rgba(180, 55, 5, 0.952);
-  padding: 1em;
+  font-size: 2.75em;
+  color: $brand-color-primary;
+  padding-top: 7.55vh;
+  font-family: ObjectSansThin;
+  font-weight: 900;
 }
+#info,
 #disclaimer {
-  font-family: ObjectSans, sans-serif;
+  font-family: ObjectSansThin, sans-serif;
+  font-weight: 700;
+  font-size: 1.46em;
   color: white;
+}
+#info {
+  padding-top: 10.46vh;
 }

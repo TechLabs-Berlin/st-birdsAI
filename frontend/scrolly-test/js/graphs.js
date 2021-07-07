@@ -11,14 +11,14 @@ graphWrapper.appendChild(pieChartText);
 
 var graphTextBox = document.getElementById('piechart-text');
 
-var pieChartTitle = document.createElement("h2");
+/* var pieChartTitle = document.createElement("h2");
 pieChartTitle.setAttribute("id", "piechart-title");
 pieChartTitle.innerText = 'Livestock and Soy';
-graphTextBox.appendChild(pieChartTitle);
+graphTextBox.appendChild(pieChartTitle); */
 
 var pieChartPar = document.createElement("p");
 pieChartPar.classList.add("chart-paragraph");
-pieChartPar.innerText = "Deforestation in Brazil is mainly commodity driven: meat, metals and palm oil. Our consumer choices contribute directly to deforestation.";
+pieChartPar.innerHTML = "Deforestation in Brazil is mainly commodity driven:<b> meat, metals, and palm oil</b>. Our consumer choices contribute directly to deforestation.";
 graphTextBox.appendChild(pieChartPar);
 
 var pieChart = document.createElement("div");  
@@ -77,15 +77,6 @@ const myChart = new Chart(ctx, {
 // create linechart divs
 var graphWrapper2 = document.getElementById('graph2-wrapper');
 
-var lineChart = document.createElement("div");  
-lineChart.setAttribute("id", "linechart");  
-lineChart.classList.add("column");              
-graphWrapper2.appendChild(lineChart); 
-lineChart.innerHTML=
-'<div class="chart-wrapper2">\
-                <canvas id="myChart2"></canvas>\
-                </div>';
-
 var lineChartText = document.createElement("div");  
 lineChartText.setAttribute("id", "linechart-text"); 
 lineChartText.classList.add("column");
@@ -95,8 +86,17 @@ var graphTextBox = document.getElementById('linechart-text');
 
 var lineChartPar = document.createElement("p");
 lineChartPar.classList.add("chart-paragraph")
-lineChartPar.innerText = "Three key drivers for deforestation of the Amazon rainforest are beef production, croplands for soy, and palm oil. Since 1990, as the production of crops and livestock have significantly increased. The remaining forest area has diminished dramatically.";
+lineChartPar.innerText = "Three key drivers for deforestation of the Amazon rainforest are beef production, croplands for soy, and palm oil. Since 1990, as the production of crops and livestock have significantly increased, the remaining forest area has diminished dramatically.";
 graphTextBox.appendChild(lineChartPar);
+
+var lineChart = document.createElement("div");  
+lineChart.setAttribute("id", "linechart");  
+lineChart.classList.add("column");              
+graphWrapper2.appendChild(lineChart); 
+lineChart.innerHTML=
+'<div class="chart-wrapper2">\
+                <canvas id="myChart2"></canvas>\
+                </div>';
 
 // display linechart
 
