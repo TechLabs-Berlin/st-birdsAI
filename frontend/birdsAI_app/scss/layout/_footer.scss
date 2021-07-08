@@ -19,6 +19,10 @@
   color: $brand-color-text;
   justify-content: center;
 }
+#footer-links {
+  align-items: center;
+  justify-content: center;
+}
 .row {
   display: flex;
   flex-direction: row;
@@ -29,4 +33,5 @@
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  padding: 5px;
 }
