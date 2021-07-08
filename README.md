@@ -8,8 +8,8 @@ This project is an attempt to bring awareness to the deforestation in the Amazon
 
 ## Set up:
 
-#####React app:
-#####Express app:
+##### React app:
+##### Express app:
 
 ##### Flask server:
 
