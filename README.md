@@ -31,7 +31,8 @@ This project is an attempt to bring awareness to the deforestation in the Amazon
     ```
   - **to start up the server** run command:
     ```sh
-    ./run_flask.sh```
+    ./run_flask.sh
+    ```
 
 ## Members
 
