@@ -11,7 +11,7 @@ var config = {
     background: true,
     use3dTerrain: false,
     title: 'BirdsAI',
-    // logo: './src/img/source.png',
+    logo: './src/img/logo_birdsai.svg',
     subtitle: '',
     byline: '',
     headerText: 'A story of the past, present, and future of the Amazon rainforest in Brazil from a bird\'s-eye view.',
