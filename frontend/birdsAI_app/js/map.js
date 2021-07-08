@@ -55,11 +55,18 @@ var layerTypes = {
   header.appendChild(flyingBirds);
   flyingBirds.setAttribute("id", "birds");  
   
+  if (config.logo){
+    var logo = document.createElement("div");
+    logo.setAttribute("id", "logo");
+    header.appendChild(logo);
+    logo.innerHTML = "<img src=\"src/img/logo_birdsai.svg\" alt=\"logo\" width=\"200px\" height=\"100px\"/>";
+  }
 // get info from config file onto the page
   if (config.title) {
     var titleText = document.createElement("h1");
     titleText.innerText = config.title;
     header.appendChild(titleText);
+    titleText.classList.add("hidden");
     
   }
 
@@ -108,6 +115,7 @@ var layerTypes = {
     swipeText.innerText = config.swipeText;
     header.appendChild(swipeText);
   }
+  
 
 // creating a navbar placeholder (logo will be added)
 
