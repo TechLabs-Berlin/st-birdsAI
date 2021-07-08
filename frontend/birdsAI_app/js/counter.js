@@ -1,4 +1,9 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains the code for the counter section. */
+/* ----------------------------------------------------------------------------- */
 
+
+// create counter div
 
 document.getElementById('counter-div').innerHTML = 
 '<h1 class="title">Hectares of primary forest <br><span id="highlight-word">lost today in Brazil</span></h1>\
@@ -11,10 +16,8 @@ document.getElementById('counter-div').innerHTML =
       </p>';
 
 
-
 var counter = document.getElementById('counter');
 var info = document.getElementById('info');
-
 
 
 // depending on what we want to show, select value for hectaresPerYear
@@ -49,7 +52,7 @@ function update() {
 
     // this part adds a line of text to help illustrate what the numbers mean
     // the line changes as the numbers grow throughout the day
-    // TODO: find good comparisons to display
+  
     if (hectaresToday > 0 && hectaresToday < 210) {
         info.innerText = "Hectare = equal to a square with 100-meter sides"
     } else if (hectaresToday < 355) {
@@ -70,7 +73,7 @@ function update() {
 
 setInterval(update, 100); // run update every 100 miliseconds
 
-// share button section
+// create share button div
 var counterDiv = document.getElementById('counter-div');
 
 var shareStory = document.createElement("div");
@@ -79,6 +82,7 @@ shareStory.innerHTML = '<img class="share"\
 src="../src/img/share.svg"\
 alt="share story">';
 
+// create social share buttons
 var btnWrapper = document.createElement("div");
 btnWrapper.setAttribute("id", "btn__wrapper");
 counterDiv.appendChild(btnWrapper); 

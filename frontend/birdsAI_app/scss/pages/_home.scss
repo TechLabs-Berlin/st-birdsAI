@@ -5,19 +5,7 @@
   margin: 0;
   padding: 0;
 }
-/* 
-//.container {
-//z-index: 1;
-//position: relative;
-//overflow: hidden;
-//display: flex;
-//align-items: center;
-// justify-content: center;
-// width: 100%;
-//min-height: 100vh;
-// min-height: 35rem;
-//} */
-
+// flying birds
 .bird {
   background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/174479/bird-cells-new.svg);
   background-size: auto 100%;
@@ -50,6 +38,7 @@
   }
 }
 
+// flying birds animation
 .bird-container {
   position: absolute;
   top: 20%;
@@ -82,6 +71,7 @@
   }
 }
 
+// flying birds animation keyframes
 @keyframes fly-cycle {
   100% {
     background-position: -900px 0;
@@ -156,6 +146,7 @@
   }
 }
 
+// section with charts
 .section {
   &__graphs,
   &__graphs2 {
@@ -167,6 +158,7 @@
   }
 }
 
+// section with counter
 .section__counter {
   background-image: url("/src/img/burned\ forest.jpg");
   background-blend-mode: soft-light;
@@ -175,13 +167,3 @@
   background-attachment: fixed;
   height: 100vh;
 }
-
-// hide or show using opacity or display
-/* #scrolly-map {
-  opacity: 1;
-  -webkit-transition: 2s;
-}
-#counter-div {
-  display: block;
-  -webkit-transition: 2s;
-} */

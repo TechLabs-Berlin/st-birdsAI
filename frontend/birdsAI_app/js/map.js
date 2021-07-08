@@ -1,5 +1,8 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains the code for the whole scrollytelling section. */
+/* ----------------------------------------------------------------------------- */
 
-// Layer setup //
+/* 1. Layer setup */
 
 // Layer types
 var layerTypes = {
@@ -38,7 +41,7 @@ var layerTypes = {
     });
   }
 
-// HTML Setup //
+/* HTML Setup */
 
 // HTML creation for the webapp
   var story = document.getElementById("story");
@@ -105,7 +108,9 @@ var layerTypes = {
     swipeText.innerText = config.swipeText;
     header.appendChild(swipeText);
   }
+
 // creating a navbar placeholder (logo will be added)
+
   /* var nav = document.createElement("div");
   story.appendChild(nav);
   nav.setAttribute("class", "nav_placeholder");
@@ -134,7 +139,8 @@ var layerTypes = {
         }  */
 
 
-// configure the chapters
+/* 3. Configure the chapters */
+
   config.chapters.forEach((record, idx) => {
     var container = document.createElement("div");
     var chapter = document.createElement("div");
@@ -156,7 +162,7 @@ var layerTypes = {
       story.innerHTML = record.description;
       chapter.appendChild(story);
     }
-
+    // slider for ESM chapter
     if (record.slider){
     var sliderDiv = document.createElement("div");
     sliderDiv.setAttribute ("id", "console");
@@ -224,8 +230,7 @@ var layerTypes = {
   // navigation control that can be added some chapters
   // var nav = new mapboxgl.NavigationControl();
 
-  // two fake datapoints for markers on map
-  // TODO: source with link?
+  // two datapoints for markers on map
   var timelapsePoints = {
     type: "FeatureCollection",
     features: [
@@ -277,7 +282,7 @@ var layerTypes = {
       .addTo(map);
   });
 
-  // Instantiate the scrollama
+  /* 4 Instantiate the scrollama */
   var scroller = scrollama();
 
   map.on("load", function () {
@@ -285,7 +290,7 @@ var layerTypes = {
     // map.dragPan.enable();
     // problematic on mobile though...
 
-    // Add data source: ESM geojson.
+    // Add data source: ESM geojson. //
      // 1. add the source for the timeseries layer
      map.addSource('ESM', {
       type: 'geojson',
@@ -316,7 +321,7 @@ var layerTypes = {
           filter: ['==', ['number', ['get', 'year']], 2020]
       });
 
-    // add data source: brazil states geojson
+    // Add data source: brazil states geojson //
     // 1. add the source for the chloropleth layer
     map.addSource("States", {
       type: "geojson",
@@ -420,11 +425,7 @@ var layerTypes = {
       });
   });
 
-  //hide slider element when user scrolls back to top!
-  /* function hideSLiderElement (){
-    const div = document.getElementById("console");
-    div.style.opacity = "0";
-  } */
+//hide slider element when user scrolls back to top! //
 // make slider visible on chapter
   function createSliderElement (){
     const div = document.getElementById("console");
@@ -446,7 +447,7 @@ function removeSliderElement (){
   // When a click event occurs on a feature in the states layer, open a popup at the
   // location of the click, with description HTML from its properties.
 
-  // TODO: remove these popups when exiting the chapter
+  // TODO: remove these popups when exiting the chapter (open...)
   function addStatePopups() {
     map.on("click", "States", function (e) {
       new mapboxgl.Popup()
@@ -484,8 +485,4 @@ function removeSliderElement (){
       // update text in the UI
       document.getElementById('active-year').innerText = year;
     });
-  }
-
-  function testCallback() {
-    console.log("successful callback from chapter");
   }

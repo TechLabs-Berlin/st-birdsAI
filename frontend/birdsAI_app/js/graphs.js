@@ -1,8 +1,10 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains the code for the graphs section. */
+/* ----------------------------------------------------------------------------- */
+
 // create piechart divs
 
 var graphWrapper = document.getElementById('graph-wrapper');
-
-
 
 var pieChartText = document.createElement("div");  
 pieChartText.setAttribute("id", "piechart-text"); 

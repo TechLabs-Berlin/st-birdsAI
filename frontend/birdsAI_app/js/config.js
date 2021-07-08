@@ -1,3 +1,7 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains the object with configuration for the scrollytelling. */
+/* ----------------------------------------------------------------------------- */
+
 var config = {
     style: 'mapbox://styles/neryfu/ckqnf8c360aqf17vvgkfysjh4',
     accessToken: 'pk.eyJ1IjoibmVyeWZ1IiwiYSI6ImNrb3g0ZGg0NzBjaXIydnBkaDhmNjEydnMifQ.xAcvXosphr3xX8thBLwUXg',
@@ -7,6 +11,7 @@ var config = {
     background: true,
     use3dTerrain: false,
     title: 'BirdsAI',
+    // logo: './src/img/source.png',
     subtitle: '',
     byline: '',
     headerText: 'A story of the past, present, and future of the Amazon rainforest in Brazil from a bird\'s-eye view.',
@@ -143,30 +148,6 @@ var config = {
                 { layer: "mapbox-satellite", opacity: 0 }
             ]
         },
-        // {
-        //     id: 'timelapse-big2',
-        //     alignment: 'center',
-        //     hidden: true,
-        //     title: 'Timelapse - emtpy chapter',
-        //     // image: './path/to/image/source.png',
-        //     description: "an emtpy chapter to create more space for the user to scroll.",
-        //     location: {
-        //         center: [-56.3, -5.35],
-        //         zoom: 4.5,
-        //         pitch: 0,
-        //         bearing: 0
-        //     },
-        //     mapAnimation: 'flyTo',
-        //     rotateAnimation: false,
-        //     callback: '',
-        //     onChapterEnter: [ { layer: "mapbox-satellite", opacity: 1 },
-        //         { layer: "sad-alerts", opacity: 0 },
-        //         { layer: "States", opacity: 0 }
-        //     ],
-        //     onChapterExit: [
-        //         { layer: "mapbox-satellite", opacity: 0 }
-        //     ]
-        // },
         {
             id: 'choropleth',
             alignment: 'right',
@@ -217,58 +198,5 @@ var config = {
                 
             ]
         },
-        // {
-        //     id: 'choropleth3',
-        //     alignment: 'left',
-        //     hidden: false,
-        //     title: 'Our appetite for (any kind of) meat has shrinked the Amazon by 17% in the last 50 years.',
-        //     // image: './path/to/image/source.png',
-        //     description: "The brazilian state Rondônia is the most deforested place in the Amazon. The area deforested in Rondônia since 2008 is equivalent to 10 times the size of Berlin. In 2018 alone, Brazil exported some $6 billion worth of beef, more than any other country in history. Jaru, Rondônia, is home to one of the biggest slaugtherhouses in Brazil. Which, after it's current expansion is complete, will kill one cow every eight seconds.",
-        //     location: {
-        //         center: [-63.30602, -10.12598],
-        //         zoom: 5,
-        //         pitch: 40,
-        //         bearing: 2
-        //     },
-        //     mapAnimation: 'flyTo',
-        //     rotateAnimation: false,
-        //     callback: '',
-        //     onChapterEnter: [
-        //         { layer: "sad-alerts", opacity: 0 },
-        //         { layer: "States", opacity: 0.3 }
-        //     ],
-        //     onChapterExit: [
-        //         { layer: "state-label", opacity: 0 },
-        //         { layer: "sad-alerts", opacity: 0 },
-        //         { layer: "States", opacity: 0 }
-        //     ]
-        // },
-        // {
-        //     id: 'second',
-        //     alignment: 'right',
-        //     hidden: false,
-        //     title: 'Time Series',
-        //     // image: './path/to/image/source.png',
-        //     description: "Using an exponential smoothing model to forecast future trends, shown here are the predictions for the years from 2020 to 2026 for the rate of deforestation (area km squarred) in the combined 9 states of the Legal Amazonia.",
-        //     location: {
-        //         center: [-63.21047, -9.35312], // [-60.3, -7.35],
-        //         zoom: 8.5,
-        //         pitch: 45,
-        //         bearing: 43.2
-        //     },
-        //     mapAnimation: 'flyTo',
-        //     rotateAnimation: false,
-        //     callback: '',
-        //     onChapterEnter: [
-        //          { layer: "sad-alerts", opacity: 0 },
-        //          { layer: "States", opacity: 0 },
-        //          { layer: "mapbox-satellite", opacity: 0 }
-        //     ],
-        //     onChapterExit: [
-        //         { layer: "mapbox-satellite", opacity: 0 },
-        //         { layer: "sad-alerts", opacity: 0 }
-        //     ]
-        // },
-        
     ]
 };
