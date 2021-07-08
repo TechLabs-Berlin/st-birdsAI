@@ -1,11 +1,15 @@
 /*-----------------------------------------------------------------------------*/
 /* This file contains all styles related to the charts */
 /* ----------------------------------------------------------------------------- */
+
+// pie chart wrapper
 .chart-wrapper {
   width: 400px;
   height: 400px;
   margin: 0 auto;
 }
+
+// line chart wrapper
 .chart-wrapper2 {
   width: 500px;
   height: 300px;
@@ -53,13 +57,31 @@
   width: 100%;
 }
 
-@media (max-width: 750px) {
+@media (min-width: 560.01px) and (max-width: 830px) {
   .column {
-    flex: 1;
+    flex: initial;
+  }
+  .chart-wrapper2 {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
+  #graph-wrapper,
+  #graph2-wrapper {
+    justify-content: center;
+  }
+}
+@media (max-width: 560px) {
+  .column {
+    flex: initial;
   }
   .chart-wrapper2 {
     width: 380px;
     height: auto;
     margin: 0 auto;
+  }
+  #graph-wrapper,
+  #graph2-wrapper {
+    justify-content: center;
   }
 }
