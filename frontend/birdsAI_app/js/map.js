@@ -59,7 +59,7 @@ var layerTypes = {
     var logo = document.createElement("div");
     logo.setAttribute("id", "logo");
     header.appendChild(logo);
-    logo.innerHTML = "<img src=\"src/img/logo_birdsai.svg\" alt=\"logo\" width=\"200px\" height=\"100px\"/>";
+    logo.innerHTML = "<img src=\"src/img/logo_birdsai.svg\" alt=\"logo\" width=\"200px\" height=\"60px\"/>";
   }
 // get info from config file onto the page
   if (config.title) {
