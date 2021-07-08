@@ -16,13 +16,22 @@ This project is an attempt to bring awareness to the deforestation in the Amazon
 > for automated installation
 
 - from the directory:
-  `backend/python`
+  ```sh 
+  backend/python
+  ```
   - run commands to install Flask and dependencies:
-    `chmod +x install_FLASK.sh`
-    `chmod +x run_flask.sh`
-    `./install_FLASK.sh`
+    ```sh
+    chmod +x install_FLASK.sh
+    ```
+    ```sh
+    chmod +x run_flask.sh
+    ```
+    ```sh 
+    ./install_FLASK.sh
+    ```
   - **to start up the server** run command:
-    `./run_flask.sh`
+    ```sh
+    ./run_flask.sh```
 
 ## Members
 
