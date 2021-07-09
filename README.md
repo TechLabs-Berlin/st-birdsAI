@@ -1,4 +1,5 @@
-# BirdsAI
+
+![logo_birdsai_highres](https://user-images.githubusercontent.com/60686512/125073844-d9f33400-e0bc-11eb-8555-ddab0ae796fb.png)
 
 ### Deforestation from a bird's eye view.
 
