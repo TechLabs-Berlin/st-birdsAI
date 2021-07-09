@@ -333,7 +333,7 @@ var layerTypes = {
     // 1. add the source for the chloropleth layer
     map.addSource("States", {
       type: "geojson",
-     data: 'src/data/sumarea.geojson'
+     data: '../src/data/sumarea.geojson'
        // data: "http://localhost:8080/api/v1/amazon/area", // the route on express
     });
 

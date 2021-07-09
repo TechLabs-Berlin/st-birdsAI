@@ -7,7 +7,7 @@ var counterDiv = document.getElementById('counter-div');
 var shareStory = document.createElement("div");
 counterDiv.appendChild(shareStory);
 shareStory.innerHTML = '<img class="share"\
-src="../src/img/share.svg"\
+src="./src/img/share.svg"\
 alt="share story">';
 
 // create social share buttons
@@ -16,17 +16,17 @@ btnWrapper.setAttribute("id", "btn__wrapper");
 counterDiv.appendChild(btnWrapper); 
 var btn1 = document.createElement("BUTTON");   // Create a <button> element
 btn1.innerHTML = '<a class="social__twit">\
-<img src="../src/img/twit.svg" alt="twitter icon">\
+<img src="./src/img/twit.svg" alt="twitter icon">\
 </a>';
 document.getElementById("btn__wrapper").appendChild(btn1);    
 var btn2 = document.createElement("BUTTON");  
 btn2.innerHTML = '<a class="social__linkd">\
-<img src="../src/img/insta.svg" alt="linkedin icon">\
-</a>';   
+<img src="./src/img/linkedin-figma.svg" alt="linkedin icon">\
+</a>';
 document.getElementById("btn__wrapper").appendChild(btn2);  
 var btn3 = document.createElement("BUTTON");  
 btn3.innerHTML = '<a class="social__fb">\
-<img src="../src/img/fb.svg" alt="facebook icon">\
+<img src="./src/img/fb.svg" alt="facebook icon">\
 </a>'; 
 document.getElementById("btn__wrapper").appendChild(btn3);
 
