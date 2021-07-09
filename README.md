@@ -15,11 +15,29 @@ To make this connection, datasets explored are:
 
 - [Express](https://expressjs.com/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [ReactJs](https://reactjs.org/)
+- [Mapbox GL JS](https://www.mapbox.com/)
+- [Scrollama](https://github.com/russellgoldenberg/scrollama)
 
-##### React app:
+&nbsp;
+   
+To set up and run the app, pull the repository and install python (www.python.com)
 
 ##### Express app:
+
+> Use the package manager [npm](https://npmjs.com/) to install the dependencies
+
+- from the directory:
+  ```sh
+  st21-birdsAI/backend/express
+  ```
+  - run commands to install express and dependencies:
+    ```sh
+    npm install
+    ```
+    ```sh
+    npm start
+    ```
+
 
 ##### Flask server:
 
