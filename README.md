@@ -21,7 +21,7 @@ To make this connection, datasets explored are:
 
 - from the directory:
   ```sh
-  backend/python
+  st21-birdsAI/backend/python
   ```
   - run commands to install Flask and dependencies:
     ```sh
