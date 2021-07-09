@@ -6,9 +6,13 @@
 
 This project is an attempt to bring awareness to the deforestation in the Amazon, through forming a connection between the user and the Amazon. By showing what deforestation looks like, the leading causes of deforestation, and deforestation rates, we hope to form a more comprehensive picture of our relationship with the Amazon.
 
+To make this connection, datasets explored are:
+[Prodes Deforestation in Amazonia](https://data.globalforestwatch.org/datasets/gfw::prodes-deforestation-in-amazonia/about)
+
 ## Set up:
 
 ##### React app:
+
 ##### Express app:
 
 ##### Flask server:
@@ -16,7 +20,7 @@ This project is an attempt to bring awareness to the deforestation in the Amazon
 > for automated installation
 
 - from the directory:
-  ```sh 
+  ```sh
   backend/python
   ```
   - run commands to install Flask and dependencies:
@@ -26,7 +30,7 @@ This project is an attempt to bring awareness to the deforestation in the Amazon
     ```sh
     chmod +x run_flask.sh
     ```
-    ```sh 
+    ```sh
     ./install_FLASK.sh
     ```
   - **to start up the server** run command:
