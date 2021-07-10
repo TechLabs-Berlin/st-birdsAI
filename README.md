@@ -30,7 +30,7 @@
 
 ## Setup
 
-To set up and run the app, pull the repository and install python (www.python.com)
+##### <a href="#built-with">Requirements:</a> python, nodeJS
 
 ### React app
 
@@ -42,13 +42,13 @@ To set up and run the app, pull the repository and install python (www.python.co
 
 2. Run following commands to install express and dependencies:
 
-    ```sh
-    npm install
-    ```
+   ```sh
+   npm install
+   ```
 
-    ```sh
-    npm start
-    ```
+   ```sh
+   npm start
+   ```
 
 ### Flask server
 
@@ -57,27 +57,30 @@ To set up and run the app, pull the repository and install python (www.python.co
 1. Go to the directory: `st21-birdsAI/backend/python`
 2. Run following commands to install Flask and dependencies:
 
-    ```sh
-    chmod +x install_FLASK.sh
-    ```
+   ```sh
+   chmod +x install_FLASK.sh
+   ```
 
-    ```sh
-    chmod +x run_flask.sh
-    ```
-  
-    ```sh
-    ./install_FLASK.sh
-    ```
+   ```sh
+   chmod +x run_flask.sh
+   ```
+
+   ```sh
+   ./install_FLASK.sh
+   ```
 
 ---
 
 ## Running
 
+- **to start up the express server** run command:
+- **to start up the react server** run command:
+
 - **to start up the server** run command:
 
-    ```sh
-    ./run_flask.sh
-    ```
+  ```sh
+  ./run_flask.sh
+  ```
 
 ---
 
