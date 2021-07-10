@@ -1,0 +1,87 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains all styles related to the charts */
+/* ----------------------------------------------------------------------------- */
+
+// pie chart wrapper
+.chart-wrapper {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+// line chart wrapper
+.chart-wrapper2 {
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+#section-title {
+  text-align: center;
+  padding-top: 1em;
+}
+
+#piechart-title {
+  text-align: center;
+  padding: 1em 0;
+}
+#piechart-text,
+#linechart-text {
+  padding: 10px;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.chart-paragraph {
+  padding: 25px 22px 15px 25px;
+  line-height: 22px;
+  font-size: 1em;
+  border-radius: 28px;
+  color: #000;
+  background-color: #fafafa;
+  font-family: ObjectSansThin, sans-serif;
+}
+
+#graph-wrapper,
+#graph2-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+@media (min-width: 560.01px) and (max-width: 830px) {
+  .column {
+    flex: initial;
+  }
+  .chart-wrapper2 {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+  }
+  #graph-wrapper,
+  #graph2-wrapper {
+    justify-content: center;
+  }
+}
+@media (max-width: 560px) {
+  .column {
+    flex: initial;
+  }
+  .chart-wrapper2 {
+    width: 380px;
+    height: auto;
+    margin: 0 auto;
+  }
+  #graph-wrapper,
+  #graph2-wrapper {
+    justify-content: center;
+  }
+}

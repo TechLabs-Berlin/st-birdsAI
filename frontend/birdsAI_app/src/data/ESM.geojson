@@ -1,0 +1,81 @@
+{
+  "type": "FeatureCollection",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "year": 2020,
+            "area": 96560.33239143784
+    },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-58.3, -6.35]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+            "year": 2021,
+            "area": 108611.65976355926
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-58.3, -6.35]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "year": 2022,
+          "area": 122167.06741205434
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-58.3, -6.35]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "year": 2023,
+          "area": 137414.27386849403
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-58.3, -6.35]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "year": 2024,
+          "area": 154564.42609951945
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-58.3, -6.35]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "year": 2025,
+          "area": 173855.02352060445
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-58.3, -6.35]
+        }
+    },
+    {
+        "type": "Feature",
+        "properties": {
+          "year": 2026,
+          "area": 195553.20694484108
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [-58.3, -6.35]
+        }
+    }
+    ]
+}

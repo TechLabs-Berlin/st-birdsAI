@@ -1,0 +1,12 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains all styles related to the popups. */
+/* ----------------------------------------------------------------------------- */
+
+.mapboxgl-popup-close-button {
+  display: none;
+}
+
+.mapboxgl-popup-content .mapboxgl-popup-content-wrapper {
+  padding: 0;
+  //width: 180px;
+}

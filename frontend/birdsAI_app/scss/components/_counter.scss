@@ -1,0 +1,50 @@
+/*-----------------------------------------------------------------------------*/
+/* This file contains all styles related to the counter. */
+/* ----------------------------------------------------------------------------- */
+
+.section__counter {
+  padding: 1em;
+}
+
+.section__counter .title {
+  color: white;
+  padding-top: 10vh;
+  font-family: ObjectSans;
+  text-transform: uppercase;
+  font-size: 1.46em;
+  line-height: 27px;
+}
+
+.share {
+  padding-top: 9vh;
+}
+
+#highlight-word {
+  color: $brand-color-primary;
+}
+#counter-div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  //min-height: 70vh;
+  background-color: gray;
+  text-align: center;
+}
+#counter {
+  font-size: 2.75em;
+  color: $brand-color-primary;
+  padding-top: 7.55vh;
+  font-family: ObjectSansThin;
+  font-weight: 900;
+}
+#info,
+#disclaimer {
+  font-family: ObjectSansThin, sans-serif;
+  font-weight: 700;
+  font-size: 1.46em;
+  color: white;
+}
+#info {
+  padding-top: 10vh;
+}

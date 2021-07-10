@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the application.
+// -----------------------------------------------------------------------------
+
+#footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  min-height: 5vh;
+  padding: 10px;
+  background: white;
+  font-family: ObjectSansThin;
+  text-align: center;
+  z-index: 5;
+  line-height: 14px;
+  font-size: 0.75em;
+}
+#footer-disclaimer {
+  color: $brand-color-text;
+  justify-content: center;
+}
+#footer-links {
+  align-items: center;
+  justify-content: center;
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: initial;
+    padding: 5px;
+  }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+/* .column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  padding: 5px;
+} */

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>BirdsAI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no"
+    />
+    <link rel="stylesheet" href="css/main.min.css" />
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  </head>
+  <body>
+    <section class="section section__scrolly-template" id="scrolly-map">
+      <div id="map"></div>
+      <div id="story"></div>
+    </section>
+    <section class="section section__graphs" id="graph-wrapper"></section>
+    <section class="section section__graphs2" id="graph2-wrapper"></section>
+    <section class="section section__counter" id="counter-div"></section>
+    <div id="footer">
+      <p class="row" id="footer-disclaimer">
+        BirdsAI is a project by course participants of TechLabs Berlin
+      </p>
+      <div class="row" id="footer-links">
+        <a class="column" href="#">Relates Links</a>
+        <a class="column" href="#">Contact Us</a>
+        <a class="column" href="#">Legal Information</a>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.4.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="js/config.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/graphs.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/social.js"></script>
+  </body>
+</html>
