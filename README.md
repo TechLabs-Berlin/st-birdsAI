@@ -30,6 +30,8 @@
 
 ## Setup
 
+To set up and run the app, pull the repository and install python (www.python.com)
+
 ### React app
 
 ### Express app
