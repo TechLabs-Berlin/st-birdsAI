@@ -86,6 +86,8 @@
 - [Express](https://expressjs.com/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
 - [ReactJs](https://reactjs.org/)
+- [Mapbox GL JS](https://www.mapbox.com/)
+- [Scrollama](https://github.com/russellgoldenberg/scrollama)
 
 ### Datasets
 
