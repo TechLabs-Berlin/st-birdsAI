@@ -10,7 +10,7 @@
   <a href="#setup">Setup</a> •
   <a href="#running">Running</a> •
   <a href="#built-with">Built With</a> •
-  <a href="#members">Members</a> •
+  <a href="#contributors">Contributors</a> •
   <a href="#license">License</a>
 </p>
 
