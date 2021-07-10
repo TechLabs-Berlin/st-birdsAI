@@ -93,6 +93,8 @@
 - [World Development Indicators](https://databank.worldbank.org/source/world-development-indicators)
 - [FAOSTAT](http://www.fao.org/faostat/en/?#data/RL)
 
+---
+
 ## Contributors
 
 **TechLabs Berlin Summer Term 2021**
@@ -113,6 +115,8 @@
 - Richard Sylvester
 
 #### Techlabs Summer Term 2021
+
+---
 
 ## License
 
