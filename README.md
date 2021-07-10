@@ -1,70 +1,109 @@
-![logo_birdsai_highres](https://user-images.githubusercontent.com/60686512/125073844-d9f33400-e0bc-11eb-8555-ddab0ae796fb.png)
+<p align="center">
+  <img src=https://user-images.githubusercontent.com/60686512/125073844-d9f33400-e0bc-11eb-8555-ddab0ae796fb.png>
+  </p>
 
-### Deforestation from a bird's eye view.
+### <center>Deforestation from a bird's eye view.</center>
+
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#demo">Demo</a> •
+  <a href="#setup">Setup</a> •
+  <a href="#running">Running</a> •
+  <a href="#built-with">Built With</a> •
+  <a href="#members">Members</a> •
+  <a href="#license">License</a>
+</p>
+
+---
 
 ## About
 
-This project is an attempt to bring awareness to the deforestation in the Amazon, through forming a connection between the user and the Amazon. By showing what deforestation looks like, the leading causes of deforestation, and deforestation rates, we hope to form a more comprehensive picture of our relationship with the Amazon.
+**BirdsAI** is a web-app that attempts to raise awareness about the deforestation in the Amazon rainforest, through forming a connection between the user and the Amazon. By showing what deforestation looks like, the leading causes of deforestation, and deforestation rates, we hope to form a more comprehensive picture of our relationship with the Amazon.
 
-To make this connection, datasets explored are:
-[Prodes Deforestation in Amazonia](https://data.globalforestwatch.org/datasets/gfw::prodes-deforestation-in-amazonia/about)
+---
 
-## Set up:
+## Demo
 
-### Built With
+[presentation] or [video] or [screenshots]
 
-- [Express](https://expressjs.com/)
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [Mapbox GL JS](https://www.mapbox.com/)
-- [Scrollama](https://github.com/russellgoldenberg/scrollama)
+---
 
-&nbsp;
-   
+## Setup
+
 To set up and run the app, pull the repository and install python (www.python.com)
 
-##### Express app:
+### React app
+
+### Express app
 
 > Use the package manager [npm](https://npmjs.com/) to install the dependencies
 
-- from the directory:
-  ```sh
-  st21-birdsAI/backend/express
-  ```
-  - run commands to install express and dependencies:
+1. Go to the directory: `st21-birdsAI/backend/express`
+
+2. Run following commands to install express and dependencies:
+
     ```sh
     npm install
     ```
+
     ```sh
     npm start
     ```
 
-
-##### Flask server:
+### Flask server
 
 > for automated installation
 
-- from the directory:
-  ```sh
-  st21-birdsAI/backend/python
-  ```
-  - run commands to install Flask and dependencies:
+1. Go to the directory: `st21-birdsAI/backend/python`
+2. Run following commands to install Flask and dependencies:
+
     ```sh
     chmod +x install_FLASK.sh
     ```
+
     ```sh
     chmod +x run_flask.sh
     ```
+  
     ```sh
     ./install_FLASK.sh
     ```
-  - **to start up the server** run command:
+
+---
+
+## Running
+
+- **to start up the server** run command:
+
     ```sh
     ./run_flask.sh
     ```
 
-## Members
+---
 
-### Team members:
+## Built With
+
+### Technology
+
+- [Express](https://expressjs.com/)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [ReactJs](https://reactjs.org/)
+- [Mapbox GL JS](https://www.mapbox.com/)
+- [Scrollama](https://github.com/russellgoldenberg/scrollama)
+
+### Datasets
+
+- [Prodes Deforestation in Amazonia](https://data.globalforestwatch.org/datasets/gfw::prodes-deforestation-in-amazonia/about)
+- [World Development Indicators](https://databank.worldbank.org/source/world-development-indicators)
+- [FAOSTAT](http://www.fao.org/faostat/en/?#data/RL)
+
+---
+
+## Contributors
+
+**TechLabs Berlin Summer Term 2021**
+
+### Team members
 
 - UX So Jin Park
 - WD Nery Machtiger
@@ -75,8 +114,14 @@ To set up and run the app, pull the repository and install python (www.python.co
 - DS Akinloye Oyeyinka Tope
 - DS Stephanie Mennear
 
-### Mentor:
+### Mentor
 
 - Richard Sylvester
 
 #### Techlabs Summer Term 2021
+
+---
+
+## License
+
+This project is licensed under MIT License - see the LICENSE.md file for details.
