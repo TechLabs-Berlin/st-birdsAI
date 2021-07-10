@@ -4,6 +4,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const connectDB = require("./backend/express/config/db");
+const request = require('request');
 
 //Load env variables
 dotenv.config({ path: "./backend/express/config/config.env" });
@@ -30,7 +31,7 @@ app.get('/', (req, res) => {
 })
 
 // flask data
-app.get('/api/v1/amazon/area', cors(), function (req, res) {
+app.get('/api/area', cors(), function (req, res) {
   console.log('fetching choropleth data from flask')
   request('http://127.0.0.1:5000/sumarea', function (error, response, body) {
     console.error('error:', error); // Print the error

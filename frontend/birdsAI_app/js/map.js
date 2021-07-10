@@ -59,7 +59,7 @@ var layerTypes = {
     var logo = document.createElement("div");
     logo.setAttribute("id", "logo");
     header.appendChild(logo);
-    logo.innerHTML = "<img src=\"src/img/logo_birdsai.svg\" alt=\"logo\" width=\"149px\" height=\"42px\"/>";
+    logo.innerHTML = "<img src=\"/src/img/logo_birdsai.svg\" alt=\"logo\" width=\"149px\" height=\"42px\"/>";
   }
 // get info from config file onto the page
   if (config.title) {
@@ -251,7 +251,7 @@ var layerTypes = {
         properties: {
           title: "Timelapse",
           description: "Deforestation near Tenharim, Rondonia, 2011-2021",
-          media: '<img class="tlapse" src="./src/img/timelapse.gif"/>',
+          media: '<img class="tlapse" src="/src/img/timelapse.gif"/>',
         },
       },
       {
@@ -263,7 +263,7 @@ var layerTypes = {
         properties: {
           title: "Timelapse",
           description: "Deforestation near Santarém, Pará, 2011-2021",
-          media: '<img class="tlapse" src="./src/img/timelapse1.gif"/>',
+          media: '<img class="tlapse" src="/src/img/timelapse1.gif"/>',
         },
       },
     ],
@@ -302,7 +302,7 @@ var layerTypes = {
      // 1. add the source for the timeseries layer
      map.addSource('ESM', {
       type: 'geojson',
-      data: 'src/data/ESM.geojson'
+      data: '/src/data/ESM.geojson'
       });
 
       // 2. add the layer
@@ -333,8 +333,8 @@ var layerTypes = {
     // 1. add the source for the chloropleth layer
     map.addSource("States", {
       type: "geojson",
-     data: '../src/data/sumarea.geojson'
-       // data: "http://localhost:8080/api/v1/amazon/area", // the route on express
+      //data: '../src/data/sumarea.geojson'
+      data: "http://localhost:8080/api/area", // the route on express
     });
 
     // 2. Add layer to visualize states polygons
