@@ -3,10 +3,10 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
-const connectDB = require("./backend/config/db");
+const connectDB = require("./backend/express/config/db");
 
 //Load env variables
-dotenv.config({ path: "./backend/config/config.env" });
+dotenv.config({ path: "./backend/express/config/config.env" });
 
 // Connect to database
 connectDB();
