@@ -155,10 +155,11 @@ _below all of the data, unless otherwise stated, is using the singular state of 
 **Testing for white noise, stationary, non-stationary**
 
 - The first step to visualize the type of time series data is to use the `seasonal_decompose` method from `statsmodels`.
-
   - Multiplicative:
+  
     ![multiplicativesd](https://user-images.githubusercontent.com/60686512/125081562-7110b980-e0c6-11eb-8f9e-1676cf91948a.png)
   - Additive:
+  
     ![additivesd](https://user-images.githubusercontent.com/60686512/125081698-96052c80-e0c6-11eb-8fc7-7da0b485ba1f.png)
 
   * The above figure uses seasonal_decompose to visualize if there are any trends in the time series. Specifically, this is using the data for the state of Amazonas, years from 2008-2019.
@@ -171,6 +172,7 @@ _below all of the data, unless otherwise stated, is using the singular state of 
   - The above `lag_plot` verifies whether a time series is random. Based on the visualization, it provides more confimation that time series could be white noise.
 
 - Next is to look at the `acf_plot`
+
   ![autocorrelationa](https://user-images.githubusercontent.com/60686512/125081805-b634eb80-e0c6-11eb-820c-9cec38332b9e.png)
 
   - The above plot visualizes whether the data has correlation; do variables act independently of one another. As with the `lag_plot`, this plot confirms that there is no correlation as well as no seasonality.
@@ -204,12 +206,15 @@ To adjust the methods to test the hypothesis, instead of using the data points o
 From here, I repeated all the above steps, but with cummulative sum instead of independent data points.
 
 - Plot of cummulative areakm values (y) and time (x):
+
   ![amlineplot](https://user-images.githubusercontent.com/60686512/125081837-c3ea7100-e0c6-11eb-8e53-8b8876f88993.png)
 
   - Visualized here is a better look at the trends of deforestation.
 
-- the `seasonal_decompose` visualizations using the time series.  
+- the `seasonal_decompose` visualizations using the time series.
+  
    ![ammonthsd](https://user-images.githubusercontent.com/60686512/125081886-d49ae700-e0c6-11eb-922a-2ca299eef93b.png)
+   
   - Here it shows strong seasonality and clear trends. The residual is not as strong as in version 1.
 - ADF results:
   > Augmented Dickey-Fuller Test:
@@ -229,7 +234,9 @@ From here, I repeated all the above steps, but with cummulative sum instead of i
 As my method stands, I have seperated all the states into individual dataframes, to predict time series on each state. At this point, I did not think whether the states would have different trends or not. (As up to this point, I've only been using the dataframe for the state of Amazonas).
 
 - Plotting the line plots of areakm cummulative sum vs time:
+
   ![cumsumallStates](https://user-images.githubusercontent.com/60686512/125081932-debce580-e0c6-11eb-8fc5-186c33a367dd.png)
+  
   - Shown here, all of the trends for the cummulative sum of area deforested from 2008-2019 = each state has different rates of deforestation. At this point, I realize that I would have to fit models to each individual state, or I would have to start over and use all states together. Due to time limitations, I decide to go for the latter.
 
 ##### Version 3:
@@ -289,6 +296,7 @@ state_area = state_area.sort_values(by='AREA_KM', ascending=True)
 ```
 
 Visualized:
+
 ![bargraph](https://user-images.githubusercontent.com/60686512/125077457-67d11e00-e0c1-11eb-83f6-780830074f86.png)
 
 Some articles explaining the data:
@@ -300,6 +308,7 @@ Some articles explaining the data:
 ##### An overall view:
 
 Below is a visualization of every each state's areakm deforestation rates plotted from 2008 - 2019.
+
 ![areakm_trends_alltimes](https://user-images.githubusercontent.com/60686512/125079357-cac3b480-e0c3-11eb-9d28-782ba46c0655.png)
 
 - From this visualization, 2008 is extremley high, while, for the most part, trends dip from 2009 - 2017.
