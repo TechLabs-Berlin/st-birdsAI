@@ -32,22 +32,16 @@
 
 ##### <a href="#built-with">Requirements:</a> python, nodeJS
 
-### React app
-
 ### Express app
 
 > Use the package manager [npm](https://npmjs.com/) to install the dependencies
 
-1. Go to the directory: `st21-birdsAI/backend/express`
+1. From the top-level directory: `st21-birdsAI`
 
 2. Run following commands to install express and dependencies:
 
    ```sh
    npm install
-   ```
-
-   ```sh
-   npm start
    ```
 
 ### Flask server
@@ -73,15 +67,17 @@
 
 ## Running
 
-- **to start up the express server** run command:
-- **to start up the react server** run command:
-
-- **to start up the server** run command:
+- **to start up the flask server** run command:
 
   ```sh
   ./run_flask.sh
   ```
 
+- **to start up express** run command:
+
+   ```sh
+   npm start
+   ```
 ---
 
 ## Built With
@@ -90,7 +86,6 @@
 
 - [Express](https://expressjs.com/)
 - [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [ReactJs](https://reactjs.org/)
 - [Mapbox GL JS](https://www.mapbox.com/)
 - [Scrollama](https://github.com/russellgoldenberg/scrollama)
 
