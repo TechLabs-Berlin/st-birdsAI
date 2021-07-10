@@ -124,4 +124,4 @@ To set up and run the app, pull the repository and install python (www.python.co
 
 ## License
 
-This project is licensed under MIT License - see the LICENSE.md file for details.
+This project is licensed under MIT License - see the LICENSE file for details.
