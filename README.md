@@ -1,43 +1,35 @@
-![logo_birdsai_highres](https://user-images.githubusercontent.com/60686512/125073844-d9f33400-e0bc-11eb-8555-ddab0ae796fb.png)
+<p align="center">
+  <img src=https://user-images.githubusercontent.com/60686512/125073844-d9f33400-e0bc-11eb-8555-ddab0ae796fb.png>
+  </p>
 
-### Deforestation from a bird's eye view.
+### <center>Deforestation from a bird's eye view.</center>
 
+<p align="center">
+  <a href="#about">About</a> •
+  <a href="#set-up">Setup</a> •
+  <a href="#built-with">Built With</a> •
+  <a href="#members">Members</a> •
+  <a href="#related">Related</a> •
+  <a href="#license">License</a>
+</p>
+
+---
 ## About
 
-This project is an attempt to bring awareness to the deforestation in the Amazon, through forming a connection between the user and the Amazon. By showing what deforestation looks like, the leading causes of deforestation, and deforestation rates, we hope to form a more comprehensive picture of our relationship with the Amazon.
+**BirdsAI** is a web-app that attempts to raise awareness about the deforestation in the Amazon rainforest, through forming a connection between the user and the Amazon. By showing what deforestation looks like, the leading causes of deforestation, and deforestation rates, we hope to form a more comprehensive picture of our relationship with the Amazon.
 
 To make this connection, datasets explored are:
 [Prodes Deforestation in Amazonia](https://data.globalforestwatch.org/datasets/gfw::prodes-deforestation-in-amazonia/about)
 
-## Set up:
+## Demo
 
-### Built With
+[presentation] + [video]
 
-- [Express](https://expressjs.com/)
-- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
-- [Mapbox GL JS](https://www.mapbox.com/)
-- [Scrollama](https://github.com/russellgoldenberg/scrollama)
+## Setup
 
-&nbsp;
-   
-To set up and run the app, pull the repository and install python (www.python.com)
+##### React app:
 
 ##### Express app:
-
-> Use the package manager [npm](https://npmjs.com/) to install the dependencies
-
-- from the directory:
-  ```sh
-  st21-birdsAI/backend/express
-  ```
-  - run commands to install express and dependencies:
-    ```sh
-    npm install
-    ```
-    ```sh
-    npm start
-    ```
-
 
 ##### Flask server:
 
@@ -62,6 +54,11 @@ To set up and run the app, pull the repository and install python (www.python.co
     ./run_flask.sh
     ```
 
+### Built With
+
+- [Express](https://expressjs.com/)
+- [Flask](https://flask.palletsprojects.com/en/2.0.x/)
+- [ReactJs](https://reactjs.org/)
 ## Members
 
 ### Team members:
