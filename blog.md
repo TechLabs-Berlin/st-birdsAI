@@ -338,7 +338,37 @@ Thank you for reading.
 
 ### DS Pavai
 
----
+To examine types of dominant drivers of deforestation, we downloaded the tree cover loss data from
+
+[tree cover loss dataset](https://gfw.global/3pu7Hjc) </br>
+
+The dataset contains deforested area from 2001 to 2020. It shows that there are six types of deforestation drivers with commodity driven deforestation being the largest driver which is shown in the following plot.
+
+deforestation_drivers_percentage.png
+
+A stacked bar plot showing the areas deforested by six different types of drivers, over the years 2001 – 2020, was plotted from the tree cover loss data which is shown below. It can be seen that the  commodity driven deforestation () is the largest driver all through the recorded years.
+
+deforestation_drivers_stack.png
+
+A significant percentage of deforestation in the Amazon rainforest area of Brazil is due to mining activities. The mining data used for the project was downloaded from 
+
+[mining dataset](https://beta-gfw.opendata.arcgis.com/datasets/brazil-mining-concessions/explore?location=-14.246250%2C-54.241550%2C4.70&showTable=true) </br>
+
+This dataset contains information on mining activities for 340 minerals in 27 states of Brazil during 1935 – 2015. The mining data was cleaned to remove the duplicate rows and NaN (in Portuguese) values. Deforestation data contains deforested area only for nine states in Brazil during 2008 – 2019, so to compare mining and deforestation data, we created a combined data, with mining and deforestation data, for nine states in Brazil during 2008 – 2015 was created. 
+
+We examined the percentage of mining-related deforestation from 2008 to 2015, and the following plot shows that mining-related deforestation was 14% in 2008, peaked at 48% in 2012, and later declined to 30% in 2015.
+
+mining_%_deforestation.png
+
+The following plot shows the top 10 minerals causing the largest area of deforestation during 2008 – 2015. It shows that gold, iron, and copper ore are the top three minerals causing mining-related deforestation.
+
+deforested_area_top10_minerals.png
+
+A lasso regression for feature selection was carried out to find the minerals that are important in predicting the mining-related deforestation, which is shown in the following plot. The minerals with non-zero values of lasso coefficient are the important features in prediction.
+
+lasso_mining.png
+
+We later realized that the prediction for mining-related deforestation needs one more parameter which is the , so we decided not to perform prediction.
 
 ### DS Yulia Guseva
 
