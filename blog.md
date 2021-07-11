@@ -341,15 +341,15 @@ Thank you for reading.
 The dataset (shapefile) deployed for the deforestation's location prediction shows annual deforestation between 2008 and 2019 and was taking from 
 'https://betagfw.opendata.arcgis.com/datasets/a37b42723a1b4a759fe51ee4e99f49da_0/about'. 
 
-# Data preprocessing
+#### Data preprocessing
 The dataset comes majorly with features that are more of intrinsic traits of deforestation, it does not have features that could be identified as either major or minor causes of the deforestation, which in a way a limitation on the prediction, but the Geo dat gave an option of geometry by which we could improvised for longitude and latitude to be the target features in order to predict location of deforestation. The following features 'day', 'month', 'year', 'state', 'area_km' were used for predicting the 'longitude' and 'latitude' as target features. By longitude and latitude, the location of deforestation can be represented on map. The figure below shows the histogram distribution of longitude and latidude on the train_set population.
 
 ![image](https://user-images.githubusercontent.com/38508834/125186801-b7802880-e22c-11eb-9aa8-ccc6cec6594e.png)
 
-# Modelling
+#### Modelling
 After cleanup and preprocessing, three different models were deployed in the predicting the target features for the location of deforestation. Xgbooost regressor performed better than others. However, the accuracy of the model was not precise enough because of the problem of longitude and latitude not being able to represent a three dimensional space with two features (i.e. not good enough to represent 3D space in 2D with the two target_features). 
 
-# Ridge Regression Model
+#### Ridge Regression Model
 The metrics value for this Ridge model on validation set are listed below:
 MAE: 1.929156 lon; MAE: 1.347259 lat
 RMSE loss: 6.071610 lon; RMSE loss: 2.861498 lat
@@ -358,7 +358,7 @@ Also the scatter plot shows the comparison of the look of actual data longitude 
 
 ![image](https://user-images.githubusercontent.com/38508834/125187069-12fee600-e22e-11eb-8851-1df5e9b80f80.png)
 
-# Decision tree Model
+#### Decision tree Model
 The metrics for this model are presented below:
 MAE: 4.797137 lon; MAE: 1.862873 lat
 RMSE loss: 28.544813 lon; RMSE loss: 5.593452 lat
@@ -367,7 +367,7 @@ This model have a close look to the actual dataset plot than the ridge regressio
 
 ![image](https://user-images.githubusercontent.com/38508834/125187700-324b4280-e231-11eb-95ca-c8104cc10344.png)
 
-# Xgboost Model
+#### Xgboost Model
 Xgboost performed better in both metric and vizualization than decision tree and selected to be the workable model of the three.
 MAE: 4.381586 lon; MAE: 1.711661 lat
 RMSE loss: 25.236562 lon; RMSE loss: 4.552240 lat
@@ -376,12 +376,12 @@ The comparison plot of the longitude and latitude of the actual dataset to the p
 
 ![image](https://user-images.githubusercontent.com/38508834/125187976-80ad1100-e232-11eb-996e-3317e81b1ce6.png)
 
-# Deployment
+#### Deployment
 Prediction on test set using Xgboost got similar result to the that of validation. The scatter plot for the comparison look of both the actual and predicted  test set is shown below:
 
 ![image](https://user-images.githubusercontent.com/38508834/125188450-17c69880-e234-11eb-9935-b5123cc87e56.png)
 
-# Summary
+#### Summary
 End users can use the model for future prediction with the provision of the following features (day, month, year, state, area_km) used in training the model.                   With this functionality, the model can be easily handled.
 A sample future prediction is presented below with provision of the following features (year, area_km, day, month, states):
 
