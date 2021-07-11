@@ -346,7 +346,7 @@ The dataset contains deforested area from 2001 to 2020. It shows that there are 
 
 ![deforestation drivers percentage barplot](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/main/data/deforestation_drivers_percentage.png)
 
-A stacked bar plot showing the areas deforested by six different types of drivers, over the years 2001 – 2020, was plotted from the tree cover loss data which is shown below. It can be seen that the  commodity driven deforestation is the largest driver all through the recorded years.
+A stacked bar plot showing the areas deforested by six different types of drivers, over the years 2001 – 2020, was plotted from the tree cover loss data which is shown below. It can be seen that the  commodity driven deforestation (like meat, metals, and palm) is the largest driver all through the recorded years.
 
 ![deforestation drivers stacked barplot](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/main/data/deforestation_drivers_stack.png)
 
