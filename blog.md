@@ -344,7 +344,10 @@ Thank you for reading.
 
 Whereas the Prodes dataset provides extended information on deforestation rates in Amazonia in Brazil, it does not provide any information on causes of deforestation and any relationship between consumers in Europe and deforestation rates. To explore the causes of deforestation, we explored the [World Development Indicators](https://databank.worldbank.org/source/world-development-indicators) and [FAOSTAT](http://www.fao.org/faostat/en/?#data/RL) datasets.
 
-As both datasets are extremely large and only small part of the data was related to agricultural development in Brazil, we had to retrieve information on Livestock Production Index, Crop Production Index and Palm Oil Production Area, as well as other land use related information separately. After constructing and cleaning up datasets, it was
+As both datasets are extremely large and only small part of the data was related to agricultural development in Brazil, we had to retrieve information on Livestock Production Index, Crop Production Index and Palm Oil Production Area, as well as other land use related information separately. After constructing and cleaning up datasets, Lasso Regression was used to identify features that are correlated with the forest area loss significantly. Firstly, 2 two features 'Livestock Production Index' and 'Stock Production Index' were identified. 
+
+![LassoRegression](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/db12595f1b556058d062aa5aebee8aeafff54aa4/data/variables_lasso.png)
+
 
 ---
 
