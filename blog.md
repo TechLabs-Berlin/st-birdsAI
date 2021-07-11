@@ -403,7 +403,7 @@ The next steps would be the following:
 
 We would try to get the App running with ReactJS. Since the Mapbox Template we used was very sensitive to changes, when adding features and functions or even sections, we decided to stick with plain Javascript for this first prototype. If we had more time I would try to split up the code in different React components without breaking the funcitonality of the scrollytelling map. This would make the App more streamlined and the code even easier to read.
 
-From the backend perspective, we would try to serve most of the larger files from express connect to a database (MongoDB). We would write a logic for the Rest API to optimize the queries so as to only access only the data needed when necessary. Also, we would also need to introduce some npm dependencies such as babel and eslint to futher improve the code while also properly documenting and commenting the coding for readability and future referencing. 
+From the backend perspective, we would try to serve most of the larger files from express connect to a database (MongoDB). We would write a logic for the Rest API to optimize the queries so as to only access only the data needed when necessary. Software Testing of the codes after development and before deployment using popular library such as mochai would also be taking into consideration. Also, we would also need to introduce some npm dependencies such as babel and eslint to futher improve the code while also properly documenting and commenting the coding for readability and future referencing. 
 
 ## Final words
 
