@@ -455,6 +455,10 @@ We would try to get the App running with ReactJS. Since the Mapbox Template we u
 
 From the backend perspective, we would try to serve most of the larger files from express connect to a database (MongoDB). We would write a logic for the Rest API to optimize the queries so as to only access only the data needed when necessary. Software Testing of the codes after development and before deployment using popular library such as mochai would also be taking into consideration. Also, we would also need to introduce some npm dependencies such as babel and eslint to futher improve the code while also properly documenting and commenting the coding for readability and future referencing. 
 
+**[DS]**
+
+We would definitely try to process satelite data and use them to train a model for recognizing deforestation patterns and detecting new areas indangered by deforestation. 
+
 ## Final words
 
 We would like to thank the team at TechLabs Berlin for helping and guiding us through this learning journey. We appreciate the opportunity we had to work as a team and learn so much from eachother, as well as all the different tracks involved in this Project. Everybody put their on special touch on BirdsAI and we hope the TechLabs Berlin volunteers like what we have presented to them. 
