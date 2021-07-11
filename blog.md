@@ -312,9 +312,10 @@ Some articles explaining the data:
 
 Below is a visualization of every each state's areakm deforestation rates plotted from 2008 - 2019.
 
-![areakm_trends_alltimes](https://user-images.githubusercontent.com/60686512/125079357-cac3b480-e0c3-11eb-9d28-782ba46c0655.png)
+![areakmTrends](https://user-images.githubusercontent.com/60686512/125196061-a1885d00-e258-11eb-8338-003a1e02b3af.png)
 
-- From this visualization, 2008 is extremley high, while, for the most part, trends dip from 2009 - 2017.
+- THe above visualizes the years 2008-2019. It is not clear by the marks, so for readability, each group of peaks represents a year. 
+- From this visualization, 2008 is extremley high, while trends dip from 2009 - 2017.
 - Discovering from research, Brazil saw a decline in deforestation rates from 2008 to around 2018.
   According to an article published November 2020 by [BBC](https://www.bbc.com/news/world-latin-america-55130304), in collaboration with Prodes data:
   > "Amazon deforestation highest since 2008"
