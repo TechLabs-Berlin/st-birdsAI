@@ -457,7 +457,7 @@ From the backend perspective, we would try to serve most of the larger files fro
 
 **[DS]**
 
-We would definetely try to process satelite data and use them to train a model for recognizing deforestation patterns and detecting new areas indangered by deforestation. 
+We would definitely try to process satelite data and use them to train a model for recognizing deforestation patterns and detecting new areas indangered by deforestation. 
 
 ## Final words
 
