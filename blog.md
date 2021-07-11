@@ -342,12 +342,17 @@ Thank you for reading.
 
 ### DS Yulia Guseva
 
-Whereas the Prodes dataset provides extended information on deforestation rates in Amazonia in Brazil, it does not provide any information on causes of deforestation and any relationship between consumers in Europe and deforestation rates. To explore the causes of deforestation, we explored the [World Development Indicators](https://databank.worldbank.org/source/world-development-indicators) and [FAOSTAT](http://www.fao.org/faostat/en/?#data/RL) datasets.
+Whereas the Prodes dataset provides extended information on deforestation rates in Amazonia in Brazil, it does not provide any information on causes of deforestation and any relationship between consumers in Europe and deforestation rates. To explore the causes of deforestation, I explored the [World Development Indicators](https://databank.worldbank.org/source/world-development-indicators) and [FAOSTAT](http://www.fao.org/faostat/en/?#data/RL) datasets.
 
-As both datasets are extremely large and only small part of the data was related to agricultural development in Brazil, we had to retrieve information on Livestock Production Index, Crop Production Index and Palm Oil Production Area, as well as other land use related information separately. After constructing and cleaning up datasets, Lasso Regression was used to identify features that are correlated with the forest area loss significantly. Firstly, 2 two features 'Livestock Production Index' and 'Stock Production Index' were identified. 
+As both datasets are extremely large and only small part of the data was related to agricultural development in Brazil, I had to retrieve information on Livestock Production Index, Crop Production Index and Palm Oil Production Area, as well as other land use related information separately. After constructing and cleaning up datasets, Lasso Regression was used to identify features that are correlated with the forest area loss significantly. Firstly, 2 two features 'Livestock Production Index' and 'Stock Production Index' were identified.
 
 ![LassoRegression](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/db12595f1b556058d062aa5aebee8aeafff54aa4/data/variables_lasso.png)
 
+Secondly, the Palm Oil Area Harvested was identified as a significant feature in the second round.
+
+![LassoRegressionPalmOil](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/db12595f1b556058d062aa5aebee8aeafff54aa4/data/Lassopalm.png)
+
+After the data for the forest area and significant causes were provided to the backend, I started to explore machine learning models to predict forest area and Livestock/Crop Production Indexes with three machine learning models: Logistic Regression, Random Forest Classifier, Ridge Regression. Unfortunately, none of the models delivered satisfying results. That could be explained by the rather small size of the dataset (28 rows) and by the fact that I didn't use Time Series.
 
 ---
 
