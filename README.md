@@ -62,9 +62,6 @@ https://user-images.githubusercontent.com/72401231/125190863-a55bb580-e23f-11eb-
    ```sh
    ./install_FLASK.sh
    ```
-
-##### Mobile view: Iphone 6/7/8 Plus recommended
-
 ---
 
 ## Running
@@ -80,6 +77,8 @@ https://user-images.githubusercontent.com/72401231/125190863-a55bb580-e23f-11eb-
    ```sh
    npm start
    ```
+   
+##### Mobile view: Iphone 6/7/8 Plus recommended
 ---
 
 ## Built With
