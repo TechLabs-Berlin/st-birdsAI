@@ -358,15 +358,16 @@ This dataset contains information on mining activities for 340 minerals in 27 st
 
 We examined the percentage of mining-related deforestation from 2008 to 2015, and the following plot shows that mining-related deforestation was 14% in 2008, peaked at 48% in 2012, and later declined to 30% in 2015.
 
-mining_%_deforestation.png
+![deforestation drivers percentage bargraph](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/main/data/mining_%25_deforestation.png)
 
 The following plot shows the top 10 minerals causing the largest area of deforestation during 2008 – 2015. It shows that gold, iron, and copper ore are the top three minerals causing mining-related deforestation.
 
+![top 10 minerals](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/main/data/deforested_area_top10_minerals.png)
 deforested_area_top10_minerals.png
 
 A lasso regression for feature selection was carried out to find the minerals that are important in predicting the mining-related deforestation, which is shown in the following plot. The minerals with non-zero values of lasso coefficient are the important features in prediction.
 
-lasso_mining.png
+![lasso mining](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/main/data/lasso_mining%20.png)lasso_mining.png
 
 We later realized that the prediction for mining-related deforestation needs few other parameters which are the availability of minerals and its location, so we decided not to perform prediction.
 
