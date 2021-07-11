@@ -445,4 +445,4 @@ From the backend perspective, we would try to serve most of the larger files fro
 
 ## Final words
 
-[...]
+We would like to thank the team at TechLabs Berlin for helping and guiding us through this learning journey. We appreciate the opportunity we had to work as a team and learn so much from eachother, as well as all the different tracks involved in this Project. Everybody put their on special touch on BirdsAI and we hope the TechLabs Berlin volunteers like what we have presented to them. 
