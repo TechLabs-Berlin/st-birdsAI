@@ -104,7 +104,9 @@ Shows the differences in deforested area between states of Brazil. Deeper color 
 
 - Charts section:
 
-This section shows the main drivers of deforestation. Using findings from DS Team we created 2 charts to visualize their data results using Chart.js.
+This section shows the main drivers of deforestation. Using findings from DS Team we created 2 charts to visualize their data results using Chart.js npm library.
+It is also and interactive chart as users can get valuable information about the deforestation drivers from interacting with it.
+
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 56" src="https://user-images.githubusercontent.com/49592794/125185721-aa603b00-e226-11eb-9439-7971842b5be6.png">
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 58 01" src="https://user-images.githubusercontent.com/49592794/125185726-b51ad000-e226-11eb-94c1-749b6be4e5ef.png">
 
