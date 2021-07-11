@@ -63,8 +63,8 @@ https://user-images.githubusercontent.com/72401231/125190863-a55bb580-e23f-11eb-
    ./install_FLASK.sh
    ```
 
-##### Mobile view: 
-Iphone 6/7/8 Plus recommended
+##### Mobile view: Iphone 6/7/8 Plus recommended
+
 ---
 
 ## Running
