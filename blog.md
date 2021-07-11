@@ -89,33 +89,28 @@ graphs.js is crucial for the HTML and chart visualizations. counter.js displays 
 - Time series chapter:
 
 The first interactive chapter in the story. It shows predictions on deforested area for each year in 2020-2026. The data was based on predictions from DS team, then transformed into GeoJSON format. A slider element was created to select which year to show. The slider controls a filter expression that returns only the selected year from the dataset. A bubble (circle) on the map grows 12% each year in accordance with the values in the dataset. Another javascript function makes slider appear when correct chapter is entered and disappear on exit.
-
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 15" src="https://user-images.githubusercontent.com/49592794/125185656-5ce3ce00-e226-11eb-83d1-647ff2fdb18e.png">
 
 
 - Time lapse chapter:
 
 Satellite time lapse animations of two hand picked locations. This chapter adds markers to the map, with popups containing text and images - gif animations served by express server from static files. When the user clicks the markers, the popups appear. Time lapse animations were created using The Copernicus EO browser.
-
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 36" src="https://user-images.githubusercontent.com/49592794/125185706-987e9800-e226-11eb-8e84-3ce4a2554ac6.png">
 
 - Choropleth map:
 
 Shows the differences in deforested area between states of Brazil. Deeper color means larger value (more area deforested). This map uses GeoJSON data served from flask and express. When the user clicks a state on the map, a pop up appears, revealing the features from the dataset. The deforested area (in km<sup>2</sup>) appears as text in the pop up.
-
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 48" src="https://user-images.githubusercontent.com/49592794/125185694-8997e580-e226-11eb-91b3-60a76ddb090f.png">
 
 - Charts section:
 
 This section shows the main drivers of deforestation. Using findings from DS Team we created 2 charts to visualize their data results using Chart.js.
-
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 56" src="https://user-images.githubusercontent.com/49592794/125185721-aa603b00-e226-11eb-9439-7971842b5be6.png">
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 58 01" src="https://user-images.githubusercontent.com/49592794/125185726-b51ad000-e226-11eb-94c1-749b6be4e5ef.png">
 
 - Counter section:
 
 A counter that counts the area of forest lost per day in hectares using pure Javascript. The counter starts counting upwards from zero every day at midnight. Different known areas in Berlin are displayed with their respective sizes for comparison, so user can get more of an idea about the rate of forest loss.
-
 <img width="461" alt="Bildschirmfoto 2021-07-11 um 08 58 09" src="https://user-images.githubusercontent.com/49592794/125185735-c663dc80-e226-11eb-8b3e-c00de98f61e8.png">
 
 **SASS**
@@ -342,8 +337,56 @@ Thank you for reading.
 ---
 
 ### DS Oyeyinka Akinloye
+The dataset (shapefile) deployed for the deforestation's location prediction shows annual deforestation between 2008 and 2019 and was taking from 
+'https://betagfw.opendata.arcgis.com/datasets/a37b42723a1b4a759fe51ee4e99f49da_0/about'. 
 
----
+# Data preprocessing
+The dataset comes majorly with features that are more of intrinsic traits of deforestation, it does not have features that could be identified as either major or minor causes of the deforestation, which in a way a limitation on the prediction, but the Geo dat gave an option of geometry by which we could improvised for longitude and latitude to be the target features in order to predict location of deforestation. The following features 'day', 'month', 'year', 'state', 'area_km' were used for predicting the 'longitude' and 'latitude' as target features. By longitude and latitude, the location of deforestation can be represented on map. The figure below shows the histogram distribution of longitude and latidude on the train_set population.
+
+![image](https://user-images.githubusercontent.com/38508834/125186801-b7802880-e22c-11eb-9aa8-ccc6cec6594e.png)
+
+# Modelling
+After cleanup and preprocessing, three different models were deployed in the predicting the target features for the location of deforestation. Xgbooost regressor performed better than others. However, the accuracy of the model was not precise enough because of the problem of longitude and latitude not being able to represent a three dimensional space with two features (i.e. not good enough to represent 3D space in 2D with the two target_features). 
+
+# Ridge Regression Model
+The metrics value for this Ridge model on validation set are listed below:
+MAE: 1.929156 lon; MAE: 1.347259 lat
+RMSE loss: 6.071610 lon; RMSE loss: 2.861498 lat
+R^2 coefficient: 0.861630 lon; R^2 coefficient: 0.783521 lat.
+Also the scatter plot shows the comparison of the look of actual data longitude and latitude to the predicted ones by Ridge model
+
+![image](https://user-images.githubusercontent.com/38508834/125187069-12fee600-e22e-11eb-8851-1df5e9b80f80.png)
+
+# Decision tree Model
+The metrics for this model are presented below:
+MAE: 4.797137 lon; MAE: 1.862873 lat
+RMSE loss: 28.544813 lon; RMSE loss: 5.593452 lat
+R^2 coefficient: 0.349471 lon; R^2 coefficient: 0.576842 lat. 
+This model have a close look to the actual dataset plot than the ridge regression model as shown below:
+
+![image](https://user-images.githubusercontent.com/38508834/125187700-324b4280-e231-11eb-95ca-c8104cc10344.png)
+
+# Xgboost Model
+Xgboost performed better in both metric and vizualization than decision tree and selected to be the workable model of the three.
+MAE: 4.381586 lon; MAE: 1.711661 lat
+RMSE loss: 25.236562 lon; RMSE loss: 4.552240 lat
+R^2 coefficient: 0.424865 lon; R^2 coefficient: 0.655612 lat
+The comparison plot of the longitude and latitude of the actual dataset to the predicted is shown below:
+
+![image](https://user-images.githubusercontent.com/38508834/125187976-80ad1100-e232-11eb-996e-3317e81b1ce6.png)
+
+# Deployment
+Prediction on test set using Xgboost got similar result to the that of validation. The scatter plot for the comparison look of both the actual and predicted  test set is shown below:
+
+![image](https://user-images.githubusercontent.com/38508834/125188450-17c69880-e234-11eb-9935-b5123cc87e56.png)
+
+# Summary
+End users can use the model for future prediction with the provision of the following features (day, month, year, state, area_km) used in training the model.                   With this functionality, the model can be easily handled.
+A sample future prediction is presented below with provision of the following features (year, area_km, day, month, states):
+
+![image](https://user-images.githubusercontent.com/38508834/125188938-1302e400-e236-11eb-89d3-a4d82fe7e80d.png)
+
+However, with features that could have better implication on the prediction and target features that could represent the location on 3D space effectively, this model will perform more better.
 
 ## If we had more time
 
