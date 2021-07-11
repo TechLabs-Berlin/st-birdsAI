@@ -368,7 +368,7 @@ A lasso regression for feature selection was carried out to find the minerals th
 
 lasso_mining.png
 
-We later realized that the prediction for mining-related deforestation needs one more parameter which is the , so we decided not to perform prediction.
+We later realized that the prediction for mining-related deforestation needs few other parameters which are the availability of minerals and its location, so we decided not to perform prediction.
 
 ### DS Yulia Guseva
 
