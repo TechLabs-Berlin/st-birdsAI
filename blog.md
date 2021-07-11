@@ -89,22 +89,29 @@ graphs.js is crucial for the HTML and chart visualizations. counter.js displays 
 - Time series chapter:
 
 The first interactive chapter in the story. It shows predictions on deforested area for each year in 2020-2026. The data was based on predictions from DS team, then transformed into GeoJSON format. A slider element was created to select which year to show. The slider controls a filter expression that returns only the selected year from the dataset. A bubble (circle) on the map grows 12% each year in accordance with the values in the dataset. Another javascript function makes slider appear when correct chapter is entered and disappear on exit.
+<img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 15" src="https://user-images.githubusercontent.com/49592794/125185656-5ce3ce00-e226-11eb-83d1-647ff2fdb18e.png">
+
 
 - Time lapse chapter:
 
 Satellite time lapse animations of two hand picked locations. This chapter adds markers to the map, with popups containing text and images - gif animations served by express server from static files. When the user clicks the markers, the popups appear. Time lapse animations were created using The Copernicus EO browser.
+<img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 36" src="https://user-images.githubusercontent.com/49592794/125185706-987e9800-e226-11eb-8e84-3ce4a2554ac6.png">
 
 - Choropleth map:
 
 Shows the differences in deforested area between states of Brazil. Deeper color means larger value (more area deforested). This map uses GeoJSON data served from flask and express. When the user clicks a state on the map, a pop up appears, revealing the features from the dataset. The deforested area (in km<sup>2</sup>) appears as text in the pop up.
+<img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 48" src="https://user-images.githubusercontent.com/49592794/125185694-8997e580-e226-11eb-91b3-60a76ddb090f.png">
 
 - Charts section:
 
 This section shows the main drivers of deforestation. Using findings from DS Team we created 2 charts to visualize their data results using Chart.js.
+<img width="461" alt="Bildschirmfoto 2021-07-11 um 08 57 56" src="https://user-images.githubusercontent.com/49592794/125185721-aa603b00-e226-11eb-9439-7971842b5be6.png">
+<img width="461" alt="Bildschirmfoto 2021-07-11 um 08 58 01" src="https://user-images.githubusercontent.com/49592794/125185726-b51ad000-e226-11eb-94c1-749b6be4e5ef.png">
 
 - Counter section:
 
 A counter that counts the area of forest lost per day in hectares using pure Javascript. The counter starts counting upwards from zero every day at midnight. Different known areas in Berlin are displayed with their respective sizes for comparison, so user can get more of an idea about the rate of forest loss.
+<img width="461" alt="Bildschirmfoto 2021-07-11 um 08 58 09" src="https://user-images.githubusercontent.com/49592794/125185735-c663dc80-e226-11eb-8b3e-c00de98f61e8.png">
 
 **SASS**
 
@@ -342,6 +349,10 @@ The next steps would be the following:
 1.  conduct of user testing with the first complete prototype
 2.  further development of scenarios and storyboards accordingly
 3.  application of the results of test and repetitive improvement of the web application. After deployment, it is necessary to find methods to approach users, help them visit the web app recurrently, and create a UX value loop. Furthermore, similar apps and websites can be analyzed and referred for positioning the web app in the market.
+
+**[WD]**
+
+We would try to get the App running with ReactJS. Since the Mapbox Template we used was very sensitive to changes, when adding features and functions or even sections, we decided to stick with plain Javascript for this first prototype. If we had more time I would try to split up the code in different React components without breaking the funcitonality of the scrollytelling map. This would make the App more streamlined and the code even easier to read.
 
 ## Final words
 
