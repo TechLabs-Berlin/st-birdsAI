@@ -369,7 +369,7 @@ A lasso regression for feature selection was carried out to find the minerals th
 
 ![lasso mining](https://github.com/TechLabs-Berlin/st21-birdsAI/blob/main/data/lasso_mining%20.png)lasso_mining.png
 
-We later realized that the prediction for mining-related deforestation needs few other parameters which are the availability of minerals and its location, so we decided not to perform prediction.
+The prediction for mining-related deforestation needs few other parameters which are the availability of minerals and its location (which are not available) so we decided not to perform prediction.
 
 ### DS Yulia Guseva
 
